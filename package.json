@@ -15,7 +15,18 @@
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "@emotion/cache": "^11.9.3",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@iconify/react": "^4.0.0",
+    "@mui/icons-material": "^5.11.0",
+    "@mui/lab": "^5.0.0-alpha.103",
+    "@mui/material": "^5.10.9",
+    "framer-motion": "^7.5.3",
+    "lottie-web": "^5.12.0",
+    "mixpanel-browser": "^2.45.0",
+    "notistack": "^2.0.5"
   },
   "devDependencies": {
     "autoprefixer": "10.4.7",
