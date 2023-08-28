@@ -1,13 +1,33 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
-import Container from '../components/container';
+import {
+  Box,
+  Button,
+  ButtonBase,
+  Typography,
+  styled,
+  useTheme
+} from '@mui/material';
+
 import MoreStories from '../components/more-stories';
 import HeroPost from '../components/hero-post';
 import Intro from '../components/intro';
 import Layout from '../components/layout';
 import { getAllPostsForHome } from '../lib/api';
 import { CMS_NAME } from '../lib/constants';
-import { Button } from '@mui/material';
+
+import { Container } from 'components/container';
+import Image from 'next/image';
+import { HeroCustomer } from '../components/hero';
+import { BlurIcon } from '../components/blur-icon';
+import { FeaturesCustomer } from '../components/features';
+
+const SectionOneWrapper = styled(Box)(({ theme }) => ({
+  background: "url('static/images/mesh-bg-3.png')",
+  width: '100%',
+  minHeight: '100vh',
+  backgroundSize: 'cover'
+}));
 
 export default function Index({ allPosts: { edges }, preview }) {
   const heroPost = edges[0]?.node;
@@ -15,26 +35,15 @@ export default function Index({ allPosts: { edges }, preview }) {
 
   console.log(heroPost);
 
+  const theme = useTheme();
+
   return (
     <Layout preview={preview}>
       <Head>
-        <title>{`Next.js Blog Example with ${CMS_NAME}`}</title>
+        <title>{'Foodie | Find local restaurant deals'}</title>
       </Head>
-      <Container>
-        <Intro />
-        {heroPost && (
-          <HeroPost
-            title={heroPost.title}
-            coverImage={heroPost.featuredImage}
-            date={heroPost.date}
-            author={heroPost.author}
-            slug={heroPost.slug}
-            excerpt={heroPost.excerpt}
-          />
-        )}
-        {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        <Button>hello</Button>
-      </Container>
+      <HeroCustomer />
+      <FeaturesCustomer />
     </Layout>
   );
 }

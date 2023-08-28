@@ -7,9 +7,9 @@ import { Box, Typography } from '@mui/material';
 // ----------------------------------------------------------------------
 
 const LogoText = styled(Typography)(({ theme }) => ({
-  fontSize: theme.spacing(48),
-  letterSpacing: theme.spacing(-2),
-  fontWeight: 'bold',
+  fontSize: 54,
+  letterSpacing: '-2px',
+  fontWeight: '700',
   textTransform: 'lowercase',
   background: `-webkit-linear-gradient(45deg, ${theme.palette.primary.main} 10%, ${theme.palette.primary.lighter} 90%)`,
   WebkitBackgroundClip: 'text',

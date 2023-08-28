@@ -1,11 +1,9 @@
 import React from 'react';
 import Lottie from 'react-lottie';
-import {  styled } from '@mui/material/styles';
-
-import Logo from 'components/logo';
+import { styled } from '@mui/material/styles';
+import { Typography } from '@mui/material';
 
 import animationData from 'assets/lottie/foodie-loading.json';
-import { Typography } from '@mui/material';
 
 const lottieOptions = {
   animationData,
@@ -16,7 +14,7 @@ const lottieOptions = {
   //   }
 };
 
-const styles = { scale: '0.9',  };
+const styles = { scale: '0.9' };
 
 const LoadinLottie = () => {
   return <Lottie style={styles} options={lottieOptions} />;
@@ -55,8 +53,7 @@ const LogoText = styled(Typography)(({ theme }) => ({
   textTransform: 'lowercase',
   background: `-webkit-linear-gradient(45deg, ${theme.palette.primary.main} 10%, ${theme.palette.primary.lighter} 90%)`,
   WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-
+  WebkitTextFillColor: 'transparent'
 }));
 
 export default function LoadingScreen() {
@@ -64,7 +61,7 @@ export default function LoadingScreen() {
     <StyledRoot>
       <LoadingContainer>
         <LoadinLottie />
-       <LogoText>Foodie</LogoText>
+        <LogoText>Foodie</LogoText>
       </LoadingContainer>
     </StyledRoot>
   );
