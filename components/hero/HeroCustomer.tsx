@@ -40,17 +40,19 @@ const HeroCustomer: FC<Props> = (props) => {
           />
         </button>
       </div>
-      <div className="flex  justify-center items-end gap-3 pb-32 pt-4">
+      <div className="flex  justify-center items-end gap-3 pb-20 xl:pb-32 pt-4">
         <Image
           height={300}
           width={275}
           alt="phone"
+          className="hidden md:block"
           src={'/static/images/phone.png'}
         />
         <Image
           height={300}
           width={300}
           alt="phone"
+          className="hidden md:block"
           src={'/static/images/phone.png'}
         />
         <Image

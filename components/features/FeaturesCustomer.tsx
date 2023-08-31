@@ -11,11 +11,15 @@ const FeaturesCustomer: FC<Props> = (props) => {
 
   return (
     <Container>
-      <Typography textAlign={'center'} mt={4} mb={12} variant="h2">
+      <Typography
+        textAlign={'center'}
+        className="mt-4 mb-0 xl:mb-12"
+        variant="h2"
+      >
         App features...
       </Typography>
 
-      <div className=" px-12 md:px-40  xl:px-20 mb-40 mt-20 grid gap-12 lg:gap-20 grid-cols-1 xl:grid-cols-3">
+      <div className=" xl:px-40  xl:px-20 mb-20 xl:mb-40 mt-20 grid gap-20  grid-cols-1 lg:grid-cols-3">
         <BlurIcon
           icon="/static/icons/custom/heart-yellow.svg"
           title="Follow your favourites"

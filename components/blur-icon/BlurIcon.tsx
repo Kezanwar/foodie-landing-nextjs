@@ -7,7 +7,7 @@ type Props = { color: string; title: string; copy: string; icon: string };
 const BlurIcon: FC<Props> = ({ color, title, copy, icon }) => {
   return (
     <div>
-      <div className="p-12 relative text-red flex items-center justify-center">
+      <div className="p-12 relative max-h-[300px] max-w-[300px] mx-auto text-red flex items-center justify-center">
         <Box
           className={`absolute h-[70%] w-[70%] xl:h-[90%] xl:w-[90%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.15] blur-[80px] z-0`}
           sx={{ backgroundColor: color }}
