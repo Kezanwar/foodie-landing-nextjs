@@ -12,12 +12,26 @@
 @tailwind utilities;
 /* Stop purging. */
 
-
 html {
   font-family: 'Poppins', sans-serif;
 }
 
 /* Your own custom utilities */
+
+.reset-btn {
+  background-color: transparent;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
 
 .has-text-align-left {
   @apply text-left;
@@ -65,10 +79,10 @@ html {
   @apply table ml-0 mr-0;
 }
 
-.wp-block-image .alignleft>figcaption,
-.wp-block-image .alignright>figcaption,
-.wp-block-image .aligncenter>figcaption,
-.wp-block-image.is-resized>figcaption {
+.wp-block-image .alignleft > figcaption,
+.wp-block-image .alignright > figcaption,
+.wp-block-image .aligncenter > figcaption,
+.wp-block-image.is-resized > figcaption {
   @apply table-caption;
 
   caption-side: bottom;

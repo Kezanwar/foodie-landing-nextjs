@@ -19,18 +19,18 @@ const FeaturesCustomer: FC<Props> = (props) => {
         App features...
       </Typography>
 
-      <div className=" xl:px-40  xl:px-20 mb-20 xl:mb-40 mt-20 grid gap-20  grid-cols-1 lg:grid-cols-3">
+      <div className="  mb-20 xl:mb-40 mt-20 grid gap-20  grid-cols-1 lg:grid-cols-3">
         <BlurIcon
           icon="/static/icons/custom/heart-yellow.svg"
           title="Follow your favourites"
           color={theme.palette.warning.main}
-          copy="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente culpa vero atque, beatae accusantium aliquid."
+          copy="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente culpa vero atque."
         />
         <BlurIcon
           title="Find amazing deals"
           icon="/static/icons/custom/fork-knife-primary.svg"
           color={theme.palette.primary.main}
-          copy="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente culpa vero atque, beatae accusantium aliquid."
+          copy="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente culpa vero atque."
         />
 
         <BlurIcon
