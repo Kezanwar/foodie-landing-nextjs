@@ -23,7 +23,7 @@ const BlurIcon: FC<Props> = ({ color, title, copy, icon }) => {
           width={'90%'}
           textAlign={'center'}
           color={'text.secondary'}
-          variant="body2"
+          variant="body1"
         >
           {copy}
         </Typography>

@@ -1,14 +1,15 @@
-import { Box, Container, styled } from '@mui/material';
 import React, { FC } from 'react';
 
+import { Container } from 'components/container';
 import Logo from 'components/logo/Logo';
-import { NavMenuDesktop } from '../../components/nav-menu';
+import { NavMenuDesktop } from 'components/nav-menu';
+
 
 type Props = {};
 
 const Header: FC<Props> = (props) => {
   return (
-    <Container maxWidth={'xl'}>
+    <Container >
       <div className="flex py-2 justify-between">
         <Logo />
         <NavMenuDesktop />

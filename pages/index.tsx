@@ -21,6 +21,7 @@ import Image from 'next/image';
 import { HeroCustomer } from '../components/hero';
 import { BlurIcon } from '../components/blur-icon';
 import { FeaturesCustomer } from '../components/features';
+import { HowItWorksCustomer } from 'components/how-it-works';
 
 const SectionOneWrapper = styled(Box)(({ theme }) => ({
   background: "url('static/images/mesh-bg-3.png')",
@@ -44,6 +45,7 @@ export default function Index({ allPosts: { edges }, preview }) {
       </Head>
       <HeroCustomer />
       <FeaturesCustomer />
+      <HowItWorksCustomer />
     </Layout>
   );
 }
