@@ -9,7 +9,7 @@ type Props = {};
 const HeroCustomer: FC<Props> = (props) => {
   return (
     <Container>
-      <div className="flex flex-col  justify-center items-center gap-3  pt-10">
+      <div className="flex flex-col  justify-center items-center gap-3">
         <Typography textAlign={'center'} mb={2} variant="h2">
           Lorem ipsum dolor sit amet
         </Typography>
@@ -40,7 +40,7 @@ const HeroCustomer: FC<Props> = (props) => {
           />
         </button>
       </div>
-      <div className="flex  justify-center items-end gap-3 pb-20 xl:pb-32 pt-4">
+      <div className="flex  justify-center items-end gap-3  pt-4">
         <Image
           height={300}
           width={275}

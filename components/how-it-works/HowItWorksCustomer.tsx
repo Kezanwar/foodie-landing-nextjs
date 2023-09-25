@@ -56,7 +56,7 @@ const HowItWorks: React.FC = () => {
               Get started
             </LightLoadingButton>
           </div>
-          <div className="relative scale-[0.8] lg:scale-[0.95]">
+          <div className="relative scale-[0.8] lg:scale-[0.95] 2xl:scale-[0.8]">
             <img
               src="https://foodie-s3.s3.eu-west-2.amazonaws.com/ipad-bg-new.png"
               alt=""
