@@ -22,6 +22,8 @@ import { HeroCustomer } from '../components/hero';
 import { BlurIcon } from '../components/blur-icon';
 import { FeaturesCustomer } from '../components/features';
 import { HowItWorksCustomer } from 'components/how-it-works';
+import { FaqsCustomer } from 'components/faqs';
+import { Spacer } from 'components/spacer';
 
 const SectionOneWrapper = styled(Box)(({ theme }) => ({
   background: "url('static/images/mesh-bg-3.png')",
@@ -34,8 +36,6 @@ export default function Index({ allPosts: { edges }, preview }) {
   const heroPost = edges[0]?.node;
   const morePosts = edges.slice(1);
 
-  console.log(heroPost);
-
   const theme = useTheme();
 
   return (
@@ -43,9 +43,15 @@ export default function Index({ allPosts: { edges }, preview }) {
       <Head>
         <title>{'Foodie | Find local restaurant deals'}</title>
       </Head>
+      <Spacer />
       <HeroCustomer />
+      <Spacer sp={12} />
       <FeaturesCustomer />
+      <Spacer sp={12} />
       <HowItWorksCustomer />
+      <Spacer sp={16} />
+      <FaqsCustomer />
+      <Spacer sp={16} />
     </Layout>
   );
 }
