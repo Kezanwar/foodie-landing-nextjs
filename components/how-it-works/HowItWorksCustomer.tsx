@@ -40,23 +40,19 @@ const HowItWorks: React.FC = () => {
 
   return (
     <Container>
-      <Typography
-        textAlign={'center'}
-        className="mt-4 mb-12 lg:mb-20"
-        variant="h2"
-      >
+      <Typography textAlign={'center'} variant="h2">
         How it works
       </Typography>
-      <div className="flex flex-col-reverse lg:grid lg:grid-cols-[0.4fr_1fr] gap-16 lg:gap-32">
+      <div className="  mt-12 lg:mt-20 flex flex-col-reverse lg:grid lg:grid-cols-[0.4fr_1fr] gap-16 lg:gap-32">
         <div className="text-center lg:text-left flex flex-col justify-center">
-          <Typography className="mb-4" lineHeight={'1.2'} variant="h3">
+          <Typography mb={3} lineHeight={'1.2'} variant="h3">
             It couldn't be easier...
           </Typography>
-          <Typography variant="body1" color={'text.secondary'}>
+          <Typography variant="body1" mb={3} color={'text.secondary'}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit a
             consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing.
           </Typography>
-          <LightLoadingButton className="mt-6 w-max mx-auto lg:mx-0">
+          <LightLoadingButton className=" w-max mx-auto lg:mx-0">
             Get started
           </LightLoadingButton>
         </div>
