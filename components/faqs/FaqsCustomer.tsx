@@ -11,7 +11,7 @@ const FaqsCustomer: React.FC = () => {
       <Typography textAlign={'center'} mb={2} variant="h2">
         Frequently asked questions
       </Typography>
-      <div className="mt-12 lg:mt-20 mx-auto max-w-[800px] relative">
+      <div className="mt-12 lg:mt-20 mx-auto max-w-[900px] relative">
         <img
           src="/static/images/blur.svg"
           alt=""

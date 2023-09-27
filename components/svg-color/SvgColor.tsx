@@ -3,7 +3,7 @@ import { Box, SxProps } from '@mui/material';
 
 type Props = {
   name: string;
-  sx: SxProps;
+  sx?: SxProps;
 };
 
 const SvgColor: FC<Props> = forwardRef(({ name, sx, ...other }, ref) => {

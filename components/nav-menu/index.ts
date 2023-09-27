@@ -1,2 +1,3 @@
 import NavMenuDesktop from './NavMenuDesktop';
-export { NavMenuDesktop };
+import NavMenuMobile from './NavMenuMobile';
+export { NavMenuDesktop, NavMenuMobile };

@@ -1,8 +1,14 @@
+import { FC, ReactNode } from 'react';
 import Alert from './alert';
 import Footer from './footer';
 import Meta from './meta';
 
-export default function Layout({ preview, children }) {
+type Props = {
+  preview?: boolean;
+  children: ReactNode;
+};
+
+const Layout: FC<Props> = ({ preview, children }) => {
   return (
     <>
       <Meta />
@@ -12,4 +18,6 @@ export default function Layout({ preview, children }) {
       </div>
     </>
   );
-}
+};
+
+export default Layout;

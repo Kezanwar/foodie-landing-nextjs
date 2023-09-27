@@ -18,10 +18,10 @@ const Accordion = styled((props: AccordionProps) => (
   //   border: `1px solid ${theme.palette.divider}`,
   '&:not(:last-child)': {
     borderBottom: 0
-  },
-  '&:before': {
-    display: 'none'
   }
+  // '&:before': {
+  //   display: 'none'
+  // }
 }));
 
 const AccordionSummary = styled((props: AccordionSummaryProps) => (
@@ -63,7 +63,7 @@ type Props = {
 };
 
 const CustomAccordion: React.FC<Props> = ({ data }) => {
-  const [expanded, setExpanded] = React.useState<string | false>(false);
+  const [expanded, setExpanded] = React.useState<string | false>('panel-0');
 
   const handleChange =
     (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
@@ -84,13 +84,14 @@ const CustomAccordion: React.FC<Props> = ({ data }) => {
               <Typography
                 color={expanded === expKey ? 'primary.main' : 'inherit'}
                 variant="h6"
+                fontWeight={600}
               >
                 {d.title}
               </Typography>
               <AddIcon />
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>{d.content}</Typography>
+              <Typography variant="body2">{d.content}</Typography>
             </AccordionDetails>
           </Accordion>
         );

@@ -14,7 +14,10 @@ const LogoText = styled(Typography)(({ theme }) => ({
   background: `-webkit-linear-gradient(45deg, ${theme.palette.primary.main} 10%, ${theme.palette.primary.lighter} 90%)`,
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
-  paddingRight: theme.spacing(1)
+  paddingRight: theme.spacing(1),
+  [theme.breakpoints.down('md')]: {
+    fontSize: 46
+  }
 }));
 
 type Props = {

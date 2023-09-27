@@ -15,7 +15,7 @@ const FeaturesCustomer: FC<Props> = (props) => {
         App features...
       </Typography>
 
-      <div className="  grid gap-20  grid-cols-1 lg:grid-cols-3">
+      <div className="gap-12  grid lg:gap-20  grid-cols-1 lg:grid-cols-3">
         <BlurIcon
           icon="/static/icons/custom/heart-yellow.svg"
           title="Follow your favourites"

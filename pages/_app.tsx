@@ -1,3 +1,8 @@
+//    ___                __ __
+//  .'  _.-----.-----.--|  |__.-----.
+//  |   _|  _  |  _  |  _  |  |  -__|
+//  |__| |_____|_____|_____|__|_____|
+
 import { AppProps } from 'next/app';
 
 import { SettingsProvider } from 'components/settings';
