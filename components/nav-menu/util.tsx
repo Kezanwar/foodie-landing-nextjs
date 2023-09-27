@@ -1,6 +1,3 @@
-import { ReactElement } from 'react';
-import { SvgColor } from 'components/svg-color';
-
 export type MenuOption = {
   link: string;
   text: string;
@@ -10,18 +7,17 @@ export type MenuOption = {
 export const NAV_MENU_OPTIONS: Array<MenuOption> = [
   {
     link: '/',
-    icon: 'ic_user',
-    text: 'Customer'
+    icon: 'ic_bag_smile',
+    text: 'Customers'
   },
   {
-    link: '/restaurant',
+    link: '/partners',
     icon: 'ic_store',
-    text: 'Restaurant'
+    text: 'Partners'
   },
   {
     link: '/news',
-    icon: 'ic_blog',
+    icon: 'ic_read',
     text: 'News & Insights'
-  },
-  
+  }
 ];
