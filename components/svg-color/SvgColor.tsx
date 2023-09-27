@@ -6,6 +6,7 @@ type Props = {
   sx?: SxProps;
 };
 
+// eslint-disable-next-line react/display-name
 const SvgColor: FC<Props> = forwardRef(({ name, sx, ...other }, ref) => {
   const src = `static/icons/ic/${name}.svg`;
   return (
