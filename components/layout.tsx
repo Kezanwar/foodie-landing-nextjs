@@ -12,7 +12,7 @@ const Layout: FC<Props> = ({ preview, children }) => {
   return (
     <>
       <Meta />
-      <div className="min-h-screen">
+      <div className="min-h-screen overflow-x-hidden">
         {/* <Alert preview={preview} /> */}
         <main>{children}</main>
       </div>
