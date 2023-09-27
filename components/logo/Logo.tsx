@@ -1,7 +1,8 @@
+/* eslint-disable react/display-name */
 import PropTypes from 'prop-types';
 import { FC, forwardRef } from 'react';
 import Link from 'next/link';
-import { SxProps, styled, useTheme } from '@mui/material/styles';
+import { SxProps, styled } from '@mui/material/styles';
 import { Box, Typography } from '@mui/material';
 
 // ----------------------------------------------------------------------
@@ -27,8 +28,6 @@ type Props = {
 
 const Logo: FC<Props> = forwardRef(
   ({ disabledLink = false, sx, ...other }, ref) => {
-    const theme = useTheme();
-
     const logo = (
       <Box
         ref={ref}

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React, { MouseEventHandler, useEffect, useRef, useState } from 'react';
 import { IconButton, Typography } from '@mui/material';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
