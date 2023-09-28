@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { MouseEventHandler, useEffect, useRef, useState } from 'react';
-import { IconButton, Typography } from '@mui/material';
+import { IconButton, Typography, styled } from '@mui/material';
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import { Container } from 'components/container';
 import { LightLoadingButton } from 'components/light-loading-button';
@@ -10,6 +10,19 @@ const iconBtnStyles = {
 };
 
 const iconBtnIconStyles = { fontSize: 80 };
+
+const getStartedBtnSx = {
+  width: 'max-content',
+  margin: ''
+};
+
+export const ActionBtn = styled(LightLoadingButton)(({ theme }) => ({
+  width: 'max-content',
+  margin: 'auto',
+  [theme.breakpoints.up('lg')]: {
+    margin: '0'
+  }
+}));
 
 const HowItWorks: React.FC = () => {
   const vidRef = useRef<HTMLVideoElement>(null);
@@ -48,13 +61,12 @@ const HowItWorks: React.FC = () => {
           <Typography mb={3} lineHeight={'1.2'} variant="h3">
             It couldn't be easier...
           </Typography>
-          <Typography variant="body1" mb={3} color={'text.secondary'}>
+          <Typography variant="body1" mb={4} color={'text.secondary'}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit a
             consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing.
           </Typography>
-          <LightLoadingButton className=" w-max mx-auto lg:mx-0">
-            Get started
-          </LightLoadingButton>
+
+          <ActionBtn>Get started</ActionBtn>
         </div>
         <div className="relative scale-[0.8] lg:scale-[0.95] 2xl:scale-[0.8]">
           <img
