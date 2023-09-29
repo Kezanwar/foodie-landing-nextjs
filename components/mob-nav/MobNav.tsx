@@ -25,12 +25,12 @@ const MobNav: FC<Props> = ({ isOpen, onClose }) => {
         }
       }}
     >
-      <div className="p-4 flex flex-col">
+      <div className="p-4 py-6 flex flex-col">
         <Logo />
 
         <div className="mt-12">
           <Subheader text="Main menu" />
-          <NavMenuMobile />
+          <NavMenuMobile onNavPress={onClose} />
         </div>
       </div>
     </Drawer>

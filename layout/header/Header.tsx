@@ -7,6 +7,15 @@ import { MobNavButton } from 'components/mob-nav-button';
 import { MobNav } from 'components/mob-nav';
 
 import { useResponsive } from 'hooks/useResponsive';
+import { Box, styled } from '@mui/material';
+
+const Wrapper = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  paddingTop: theme.spacing(3),
+  paddingBottom: theme.spacing(3)
+}));
 
 const Header: FC = () => {
   const [_, isTablet] = useResponsive();
@@ -15,17 +24,19 @@ const Header: FC = () => {
   const toggleMobNav = () => setMobNavOPen((prev) => !prev);
 
   return (
-    <Container>
-      <div className="flex py-2 justify-between items-center">
-        <Logo />
-        {isTablet ? (
-          <MobNavButton onClick={toggleMobNav} isOpen={mobNavOpen} />
-        ) : (
-          <NavMenuDesktop />
-        )}
-      </div>
+    <>
+      <Container>
+        <Wrapper>
+          <Logo />
+          {isTablet ? (
+            <MobNavButton onClick={toggleMobNav} isOpen={mobNavOpen} />
+          ) : (
+            <NavMenuDesktop />
+          )}
+        </Wrapper>
+      </Container>
       <MobNav isOpen={mobNavOpen} onClose={toggleMobNav} />
-    </Container>
+    </>
   );
 };
 
