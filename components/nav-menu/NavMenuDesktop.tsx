@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 type Props = {};
 
-const NavMenuDesktop: FC<Props> = (props) => {
+const NavMenuDesktop: FC<Props> = () => {
   const { pathname } = useRouter();
 
   return (
