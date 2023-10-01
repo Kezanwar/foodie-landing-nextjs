@@ -19,12 +19,11 @@ export default function Partners({ allPosts, preview }) {
   return (
     <Layout preview={preview}>
       <Head>
-        <title>{'Foodie | Find local restaurant deals'}</title>
+        <title>{'Partners | Foodie'}</title>
       </Head>
       <Spacer />
       <HeroPartner />
       <Spacer sp={16} />
-
       <FeaturesPartner />
       <Spacer sp={16} />
       <HowItWorksCustomer />
