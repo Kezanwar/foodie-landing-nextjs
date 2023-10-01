@@ -20,7 +20,8 @@ module.exports = {
       '0.gravatar.com',
       '1.gravatar.com',
       '2.gravatar.com',
-      'secure.gravatar.com'
+      'secure.gravatar.com',
+      'www.creativetourist.com'
     ]
   }
 };
