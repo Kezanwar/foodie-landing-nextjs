@@ -11,7 +11,7 @@ const HeroCustomer: FC<Props> = (props) => {
     <Container>
       <div className="flex flex-col  justify-center items-center gap-3">
         <Typography textAlign={'center'} mb={2} variant="h2">
-          Lorem ipsum dolor sit amet
+          Customer Lorem ipsum dolor sit amet
         </Typography>
         <Typography
           textAlign={'center'}
