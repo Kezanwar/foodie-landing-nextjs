@@ -23,7 +23,7 @@ export default function Partners({ allPosts, preview }) {
       </Head>
       <Spacer />
       <HeroPartner />
-      <Spacer sp={16} />
+      <Spacer sp={10} />
       <FeaturesPartner />
       <Spacer sp={16} />
       <HowItWorksCustomer />
