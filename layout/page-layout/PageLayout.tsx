@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react';
 
 import { Header } from '../header';
 import { Meta } from '../meta';
-import { Footer } from '../footer';
+import Footer from 'components/footer';
 
 type Props = { children: ReactNode };
 
