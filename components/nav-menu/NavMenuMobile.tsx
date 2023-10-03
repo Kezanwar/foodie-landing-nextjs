@@ -23,7 +23,7 @@ const NavMenuMobile: FC<Props> = ({ onNavPress }) => {
                 onClick={onNavPress}
                 active={pathname === menu_item.link}
               >
-                <SvgColor name={menu_item.icon} /> {menu_item.text}
+                {menu_item.icon} {menu_item.text}
               </NavItemMob>
             </Link>
           </React.Fragment>

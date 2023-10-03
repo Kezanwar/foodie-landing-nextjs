@@ -1,23 +1,29 @@
+import { ReactElement } from 'react';
+
+import CustomerBag from 'components/icons/CustomerBag';
+import Read from 'components/icons/Read';
+import Store from 'components/icons/Store';
+
 export type MenuOption = {
   link: string;
   text: string;
-  icon: string;
+  icon: ReactElement;
 };
 
 export const NAV_MENU_OPTIONS: Array<MenuOption> = [
   {
     link: '/',
-    icon: 'ic_bag_smile',
+    icon: <CustomerBag />,
     text: 'Customers'
   },
   {
     link: '/partners',
-    icon: 'ic_store',
+    icon: <Store />,
     text: 'Partners'
   },
   {
     link: '/news',
-    icon: 'ic_read',
+    icon: <Read />,
     text: 'News & Insights'
   }
 ];
