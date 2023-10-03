@@ -17,9 +17,7 @@ export const serverPath = (staticFilePath: string) => {
 export const APP_ENV = process.env.NEXT_PUBLIC_APP_ENV;
 
 export const RESTAURANT_DASHBOARD_URL =
-  APP_ENV === 'production'
-    ? process.env.NEXT_PUBLIC_RESTAURANT_DASHBOARD_PROD
-    : process.env.NEXT_PUBLIC_RESTAURANT_DASHBOARD_STAGING;
+  process.env.NEXT_PUBLIC_RESTAURANT_DASHBOARD;
 
 export const mediaQueries = {
   lgTablet: '(max-width: 1024px)',
