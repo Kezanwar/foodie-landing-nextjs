@@ -58,7 +58,7 @@ const HeroPartner: FC<Props> = () => {
           href={`${RESTAURANT_DASHBOARD_URL}/login`}
         >
           <BlackButton variant="outlined" color="inherit">
-            Login <KeyboardArrowRightIcon sx={{ ml: 0.5 }} fontSize="small" />
+            Login <KeyboardArrowRightIcon sx={{ ml: 0 }} fontSize="small" />
           </BlackButton>
         </Link>
       </div>
