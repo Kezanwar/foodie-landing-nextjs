@@ -4,9 +4,6 @@ import Image from 'next/image';
 import { Button, Typography, styled } from '@mui/material';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import LoginIcon from '@mui/icons-material/Login';
-
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 import { Container } from 'components/container';
 
