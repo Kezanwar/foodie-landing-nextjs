@@ -5,7 +5,11 @@ import { FC } from 'react';
 const LightLoadingButton: FC<LoadingButtonProps> = styled(LoadingButton)(
   ({ theme }) => ({
     backgroundColor: `${alpha(theme.palette.primary.main, 0.15)}`,
-    color: 'primary'
+    color: 'primary',
+    border: '2px solid transparent',
+    '&:hover': {
+      border: `2px solid ${theme.palette.primary.main} `
+    }
   })
 );
 
