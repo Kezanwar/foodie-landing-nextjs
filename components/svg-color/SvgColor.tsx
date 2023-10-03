@@ -1,5 +1,6 @@
 import { FC, forwardRef } from 'react';
 import { Box, SxProps } from '@mui/material';
+import Image from 'next/image';
 
 type Props = {
   name: string;
@@ -8,7 +9,7 @@ type Props = {
 
 // eslint-disable-next-line react/display-name
 const SvgColor: FC<Props> = forwardRef(({ name, sx, ...other }, ref) => {
-  const src = `static/icons/ic/${name}.svg`;
+  const src = `/static/icons/ic/${name}.svg`;
   return (
     <Box
       component="span"
@@ -18,13 +19,12 @@ const SvgColor: FC<Props> = forwardRef(({ name, sx, ...other }, ref) => {
         width: 24,
         height: 24,
         display: 'inline-block',
-        bgcolor: 'currentColor',
-        mask: `url(${src}) no-repeat center / contain`,
-        WebkitMask: `url(${src}) no-repeat center / contain`,
+        color: 'currentcolor',
         ...sx
       }}
-      {...other}
-    />
+    >
+      <Image height={24} alt="icon" width={24} src={src} />
+    </Box>
   );
 });
 

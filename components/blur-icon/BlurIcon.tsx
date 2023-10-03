@@ -1,5 +1,4 @@
 import React, { FC, useEffect } from 'react';
-import { SvgColor } from '../svg-color';
 import { Box, Typography } from '@mui/material';
 
 type Props = {
