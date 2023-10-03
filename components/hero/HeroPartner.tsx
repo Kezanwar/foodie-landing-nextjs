@@ -45,7 +45,7 @@ const HeroPartner: FC<Props> = () => {
       </div>
       <div className="flex  justify-center items-center py-8 gap-3">
         <a
-          style={{ color: 'inherit' }}
+          className="text-inherit"
           href={`${RESTAURANT_DASHBOARD_URL}/register`}
         >
           <LightLoadingButton sx={{ fontSize: 16, minWidth: 110 }}>
@@ -53,10 +53,7 @@ const HeroPartner: FC<Props> = () => {
           </LightLoadingButton>
         </a>
 
-        <a
-          style={{ color: 'inherit' }}
-          href={`${RESTAURANT_DASHBOARD_URL}/login`}
-        >
+        <a className="text-inherit" href={`${RESTAURANT_DASHBOARD_URL}/login`}>
           <BlackButton variant="outlined" color="inherit">
             Sign in <KeyboardArrowRightIcon fontSize="small" />
           </BlackButton>
