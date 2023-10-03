@@ -9,6 +9,10 @@
   @apply my-6;
 }
 
+.content p {
+  font-size: 1rem;
+}
+
 .content a {
   @apply underline;
 }

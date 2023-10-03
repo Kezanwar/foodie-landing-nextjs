@@ -1,7 +1,7 @@
-import Avatar from './avatar'
-import Date from './date'
-import CoverImage from './cover-image'
-import Link from 'next/link'
+import Avatar from './avatar';
+import Date from './date';
+import CoverImage from './cover-image';
+import Link from 'next/link';
 
 export default function PostPreview({
   title,
@@ -9,7 +9,7 @@ export default function PostPreview({
   date,
   excerpt,
   author,
-  slug,
+  slug
 }) {
   return (
     <div>
@@ -34,5 +34,5 @@ export default function PostPreview({
       />
       <Avatar author={author} />
     </div>
-  )
+  );
 }
