@@ -1,13 +1,34 @@
 import React, { FC } from 'react';
-import { Typography } from '@mui/material';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Button, Typography, styled } from '@mui/material';
+import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import LoginIcon from '@mui/icons-material/Login';
+
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 import { Container } from 'components/container';
-import Image from 'next/image';
+
 import { LightLoadingButton } from 'components/light-loading-button';
+import { RESTAURANT_DASHBOARD_URL } from 'lib/constants';
+import { LoadingButton } from '@mui/lab';
 
 type Props = {};
 
-const HeroPartner: FC<Props> = (props) => {
+export const BlackButton = styled(LoadingButton)(({ theme }) => ({
+  backgroundColor: 'black',
+  color: 'white',
+  fontSize: 16,
+  paddingLeft: theme.spacing(1.5),
+  paddingRight: theme.spacing(0.5),
+  '&:hover': {
+    backgroundColor: theme.palette.grey[600]
+  }
+}));
+
+const HeroPartner: FC<Props> = () => {
+  console.log(RESTAURANT_DASHBOARD_URL);
   return (
     <Container>
       <div className="flex flex-col  justify-center items-center gap-4">
@@ -25,10 +46,24 @@ const HeroPartner: FC<Props> = (props) => {
           exercitationem.
         </Typography>
       </div>
-      <div className="flex  justify-center items-center py-8 gap-6">
-        <LightLoadingButton sx={{ fontSize: 16 }}>
-          Register Now
-        </LightLoadingButton>
+      <div className="flex  justify-center items-center py-8 gap-3">
+        <Link
+          style={{ color: 'inherit' }}
+          href={`${RESTAURANT_DASHBOARD_URL}/register`}
+        >
+          <LightLoadingButton sx={{ fontSize: 16, minWidth: 110 }}>
+            <AppRegistrationIcon sx={{ mr: 0.5 }} fontSize="small" /> Register
+          </LightLoadingButton>
+        </Link>
+
+        <Link
+          style={{ color: 'inherit' }}
+          href={`${RESTAURANT_DASHBOARD_URL}/login`}
+        >
+          <BlackButton variant="contained" color="inherit">
+            Login <KeyboardArrowRightIcon sx={{ ml: 0.5 }} fontSize="small" />
+          </BlackButton>
+        </Link>
       </div>
       {/* <div className="flex flex-col lg:flex-row justify-center items-center gap-6 pt-8 "> */}
       <div className="flex  justify-center  pt-6 ">
