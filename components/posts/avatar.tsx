@@ -9,7 +9,7 @@ export default function Avatar({ author }) {
 
   return (
     <div className="flex items-center">
-      <div className="w-10 h-10 relative mr-3">
+      <div className="w-8 h-8 relative mr-3">
         <Image
           src={author.node.avatar.url}
           layout="fill"
@@ -17,7 +17,7 @@ export default function Avatar({ author }) {
           alt={name}
         />
       </div>
-      <div className="text-lg capitalize">{name}</div>
+      <div className="text-md capitalize">{name}</div>
     </div>
   );
 }

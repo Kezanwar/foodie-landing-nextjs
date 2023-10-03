@@ -3,14 +3,14 @@ import { Chip } from '@mui/material';
 export default function Categories({ categories }) {
   console.log(categories);
   return (
-    <span>
+    <div className="flex items-center gap-2">
       {categories.edges.length > 0 ? (
         categories.edges.map((category, index) => (
-          <Chip key={index}>{category.node.name}</Chip>
+          <Chip label={category.node.name} key={index} />
         ))
       ) : (
         <Chip>{categories.edges.node.name}</Chip>
       )}
-    </span>
+    </div>
   );
 }

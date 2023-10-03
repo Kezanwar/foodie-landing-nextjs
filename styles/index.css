@@ -17,6 +17,10 @@ html {
   /* overflow-x: hidden; */
 }
 
+figure {
+  margin: 0;
+}
+
 /* Your own custom utilities */
 
 .reset-btn {
