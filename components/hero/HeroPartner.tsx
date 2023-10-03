@@ -44,23 +44,23 @@ const HeroPartner: FC<Props> = () => {
         </Typography>
       </div>
       <div className="flex  justify-center items-center py-8 gap-3">
-        <Link
+        <a
           style={{ color: 'inherit' }}
           href={`${RESTAURANT_DASHBOARD_URL}/register`}
         >
           <LightLoadingButton sx={{ fontSize: 16, minWidth: 110 }}>
             <AppRegistrationIcon sx={{ mr: 0.5 }} fontSize="small" /> Register
           </LightLoadingButton>
-        </Link>
+        </a>
 
-        <Link
+        <a
           style={{ color: 'inherit' }}
           href={`${RESTAURANT_DASHBOARD_URL}/login`}
         >
           <BlackButton variant="outlined" color="inherit">
             Sign in <KeyboardArrowRightIcon fontSize="small" />
           </BlackButton>
-        </Link>
+        </a>
       </div>
       {/* <div className="flex flex-col lg:flex-row justify-center items-center gap-6 pt-8 "> */}
       <div className="flex  justify-center  pt-6 ">
