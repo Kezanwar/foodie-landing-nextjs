@@ -17,14 +17,14 @@ import { LoadingButton } from '@mui/lab';
 type Props = {};
 
 export const BlackButton = styled(LoadingButton)(({ theme }) => ({
-  backgroundColor: 'black',
-  color: 'white',
+  // color: 'white',
   fontSize: 16,
   paddingLeft: theme.spacing(1.5),
   paddingRight: theme.spacing(0.5),
-  '&:hover': {
-    backgroundColor: theme.palette.grey[600]
-  }
+  borderWidth: '2px'
+  // '&:hover': {
+  //   backgroundColor: theme.palette.grey[600]
+  // }
 }));
 
 const HeroPartner: FC<Props> = () => {
@@ -60,7 +60,7 @@ const HeroPartner: FC<Props> = () => {
           style={{ color: 'inherit' }}
           href={`${RESTAURANT_DASHBOARD_URL}/login`}
         >
-          <BlackButton variant="contained" color="inherit">
+          <BlackButton variant="outlined" color="inherit">
             Login <KeyboardArrowRightIcon sx={{ ml: 0.5 }} fontSize="small" />
           </BlackButton>
         </Link>
