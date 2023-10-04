@@ -16,7 +16,7 @@ export default function PostHeader({
 }) {
   return (
     <>
-      <div className="mt-4 mb-12  ">
+      <div className="mt-4 mb-6 lg:mb-12  ">
         <CoverImage title={title} coverImage={coverImage} />
       </div>
 
