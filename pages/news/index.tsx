@@ -8,8 +8,10 @@ import { Container } from 'components/container';
 import { Spacer } from 'components/spacer';
 
 import { getAllPostsForHome } from 'lib/api';
+import PostPreview from 'components/posts/post-preview';
 
 export default function Index({ allPosts, preview }) {
+  console.log(allPosts);
   return (
     <Layout preview={preview}>
       <Head>
@@ -18,76 +20,22 @@ export default function Index({ allPosts, preview }) {
       <Spacer />
 
       <Container>
-        <Typography mb={2} component={'h1'} variant="h2">
+        <Typography mt={6} mb={3} component={'h1'} variant="h3">
           News & Insights
         </Typography>
-        <div className="grid  md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Image
-            alt="featured-post"
-            src={
-              'https://www.creativetourist.com/app/uploads/2015/10/10945572_919096154791470_3286054712372461805_n.jpg'
-            }
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="rounded-xl"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }} // optional
-          />
-          <Image
-            alt="featured-post"
-            src={
-              'https://www.creativetourist.com/app/uploads/2015/10/10945572_919096154791470_3286054712372461805_n.jpg'
-            }
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="rounded-xl"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }} // optional
-          />
-          <Image
-            alt="featured-post"
-            src={
-              'https://www.creativetourist.com/app/uploads/2015/10/10945572_919096154791470_3286054712372461805_n.jpg'
-            }
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="rounded-xl"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }} // optional
-          />
-          <Image
-            alt="featured-post"
-            src={
-              'https://www.creativetourist.com/app/uploads/2015/10/10945572_919096154791470_3286054712372461805_n.jpg'
-            }
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="rounded-xl"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }} // optional
-          />
-          <Image
-            alt="featured-post"
-            src={
-              'https://www.creativetourist.com/app/uploads/2015/10/10945572_919096154791470_3286054712372461805_n.jpg'
-            }
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="rounded-xl"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }} // optional
-          />
-          <Image
-            alt="featured-post"
-            src={
-              'https://www.creativetourist.com/app/uploads/2015/10/10945572_919096154791470_3286054712372461805_n.jpg'
-            }
-            width={0}
-            height={0}
-            sizes="100vw"
-            className="rounded-xl"
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }} // optional
-          />
+        <div className="grid  md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {allPosts?.edges?.map(({ node }) => (
+            <PostPreview
+              key={node.slug}
+              title={node.title}
+              coverImage={node.featuredImage}
+              date={node.date}
+              author={node.author}
+              slug={node.slug}
+              excerpt={node.excerpt}
+              restaurant_review_fields={node.restaurant_review_fields}
+            />
+          ))}
         </div>
       </Container>
     </Layout>

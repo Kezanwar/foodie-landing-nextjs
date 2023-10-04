@@ -17,7 +17,7 @@ html {
   /* overflow-x: hidden; */
 }
 
-figure {
+* {
   margin: 0;
 }
 
@@ -131,4 +131,13 @@ video {
 
 .wp-block-media-text {
   @apply grid grid-cols-2 gap-4;
+}
+
+.is-layout-flex {
+  display: flex;
+  gap: 2rem;
+}
+
+.is-layout-flex > * {
+  flex: 1;
 }

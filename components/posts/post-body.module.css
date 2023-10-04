@@ -2,6 +2,14 @@
   @apply text-lg leading-relaxed;
 }
 
+.content figure {
+  margin: 0;
+}
+
+.content img {
+  @apply rounded-xl;
+}
+
 .content p,
 .content ul,
 .content ol,

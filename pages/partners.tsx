@@ -10,12 +10,7 @@ import { getAllPostsForHome } from 'lib/api';
 import HeroPartner from 'components/hero/HeroPartner';
 import FeaturesPartner from 'components/features/FeaturesPartner';
 
-export default function Partners({ allPosts, preview }) {
-  // const heroPost = edges[0]?.node;
-  // const morePosts = edges.slice(1);
-
-  // console.log(allPosts);
-
+export default function Partners({ preview }) {
   return (
     <Layout preview={preview}>
       <Head>
@@ -33,12 +28,3 @@ export default function Partners({ allPosts, preview }) {
     </Layout>
   );
 }
-
-export const getStaticProps: GetStaticProps = async ({ preview = false }) => {
-  const allPosts = await getAllPostsForHome(preview);
-
-  return {
-    props: { allPosts, preview },
-    revalidate: 10
-  };
-};

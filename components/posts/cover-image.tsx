@@ -25,15 +25,18 @@ export default function CoverImage({ title, coverImage, slug }: Props) {
       })}
     />
   );
-  return (
-    <div className="h-[280px] lg:h-[400px]">
-      {slug ? (
-        <Link href={`/news/${slug}`} aria-label={title}>
-          {image}
-        </Link>
-      ) : (
-        image
-      )}
+  return !slug ? (
+    <div className="h-[280px] lg:h-[340px]">{image}</div>
+  ) : (
+    <div className="h-[200px]">
+      <Link href={`/news/${slug}`} aria-label={title}>
+        {image}
+      </Link>
     </div>
   );
 }
+
+// {slug ? (
+//         <Link href={`/news/${slug}`} aria-label={title}>
+//           {image}
+//         </Link>
