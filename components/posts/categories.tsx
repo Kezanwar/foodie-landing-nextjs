@@ -1,7 +1,6 @@
 import { Chip } from '@mui/material';
 
 export default function Categories({ categories }) {
-  console.log(categories);
   return (
     <div className="flex items-center gap-2">
       {categories.edges.length > 0 ? (
