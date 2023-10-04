@@ -43,7 +43,7 @@ const HeroPartner: FC<Props> = () => {
           exercitationem.
         </Typography>
       </div>
-      <div className="flex  justify-center items-center py-8 gap-3">
+      <div className="flex  justify-center items-center py-8 gap-5">
         <a
           className="text-inherit"
           href={`${RESTAURANT_DASHBOARD_URL}/register`}
