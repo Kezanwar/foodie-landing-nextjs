@@ -1,17 +1,16 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
+
 import { Typography } from '@mui/material';
 
 import Layout from 'components/layout';
 import { Container } from 'components/container';
 import { Spacer } from 'components/spacer';
-
-import { getAllPostsForHome } from 'lib/api';
 import PostPreview from 'components/posts/post-preview';
 
+import { getAllPostsForHome } from 'lib/api';
+
 export default function Index({ allPosts, preview }) {
-  console.log(allPosts);
   return (
     <Layout preview={preview}>
       <Head>
@@ -20,7 +19,7 @@ export default function Index({ allPosts, preview }) {
       <Spacer />
 
       <Container>
-        <Typography mt={6} mb={3} component={'h1'} variant="h3">
+        <Typography textAlign={'center'} mb={8} variant="h2">
           News & Insights
         </Typography>
         <div className="grid  md:grid-cols-2 lg:grid-cols-3 gap-10">
