@@ -23,7 +23,7 @@ export default function PostPreview({
 
       <h3 className=" mt-3 mb-3 text-2xl leading-snug">
         <Link
-          href={`/posts/${slug}`}
+          href={`/news/${slug}`}
           className=" group-hover:underline text-inherit"
           dangerouslySetInnerHTML={{ __html: title }}
         ></Link>
