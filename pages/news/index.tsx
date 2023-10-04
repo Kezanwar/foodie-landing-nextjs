@@ -20,7 +20,7 @@ export default function Index({ allPosts, preview }) {
       <Spacer />
 
       <Container>
-        <Typography mb={3} component={'h1'} variant="h3">
+        <Typography mt={6} mb={3} component={'h1'} variant="h3">
           News & Insights
         </Typography>
         <div className="grid  md:grid-cols-2 lg:grid-cols-3 gap-10">
