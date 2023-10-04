@@ -28,6 +28,7 @@ export const NavItemMob = styled(ListItemButton, {
     gap: theme.spacing(1),
     alignItems: 'center',
     fontSize: 15,
+    lineHeight: 0,
 
     // Active item
     ...(active && {
