@@ -24,7 +24,7 @@ export default function Index({ allPosts, preview }) {
       </Head>
       <Spacer />
       <HeroCustomer />
-      <Spacer sp={16} />
+      <Spacer sp={10} />
       <FeaturesCustomer />
       <Spacer sp={16} />
       <HowItWorksCustomer />

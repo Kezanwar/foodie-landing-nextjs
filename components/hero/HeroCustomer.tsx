@@ -24,17 +24,19 @@ const HeroCustomer: FC<Props> = (props) => {
           exercitationem.
         </Typography>
       </div>
-      <div className="flex  justify-center items-center gap-6">
+      <div className="flex h-max -my-[20px]  justify-center items-center gap-3">
         <button className="reset-btn">
-          <img
-            className="w-[170px]"
+          <Image
+            height={100}
+            width={175}
             src="static/icons/app-store/apple-app-store.svg"
             alt="download on the apple app store"
           />
         </button>
         <button className="reset-btn">
-          <img
-            className="w-[160px]"
+          <Image
+            height={100}
+            width={160}
             src="static/icons/app-store/google-play-store.svg"
             alt="download on the apple app store"
           />
