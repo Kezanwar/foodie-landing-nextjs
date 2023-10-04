@@ -25,7 +25,6 @@ export const BlackButton = styled(LoadingButton)(({ theme }) => ({
 }));
 
 const HeroPartner: FC<Props> = () => {
-  console.log(RESTAURANT_DASHBOARD_URL);
   return (
     <Container>
       <div className="flex flex-col  justify-center items-center gap-4">
