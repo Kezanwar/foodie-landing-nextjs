@@ -11,7 +11,7 @@ const LogoText = styled(Typography)(({ theme }) => ({
   fontSize: 54,
   letterSpacing: '-2px',
   lineHeight: '1',
-  fontWeight: '700',
+  fontWeight: '800',
   textTransform: 'lowercase',
   background: `-webkit-linear-gradient(45deg, ${theme.palette.primary.main} 10%, ${theme.palette.primary.lighter} 90%)`,
   WebkitBackgroundClip: 'text',
