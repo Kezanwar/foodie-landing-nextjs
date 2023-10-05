@@ -19,10 +19,10 @@ export default function Index({ allPosts, preview }) {
       <Spacer />
 
       <Container>
-        <Typography textAlign={'center'} mb={8} variant="h2">
+        <Typography textAlign={'center'} mb={3} variant="h2">
           News & Insights
         </Typography>
-        <div className="grid  md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="mt-8 lg:mt-12 grid  md:grid-cols-2 lg:grid-cols-3 gap-10">
           {allPosts?.edges?.map(({ node }) => (
             <PostPreview
               key={node.slug}
