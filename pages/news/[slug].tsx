@@ -45,12 +45,11 @@ export default function Post({ post, posts, preview }) {
                 date={post.date}
                 author={post.author}
                 categories={post.categories}
+                tags={post.tags}
                 restaurant_review_fields={post.restaurant_review_fields}
               />
               <PostBody content={post.content} />
-              <footer>
-                {post.tags.edges.length > 0 && <Tags tags={post.tags} />}
-              </footer>
+              <footer></footer>
             </article>
 
             {morePosts.length > 0 && <MoreStories posts={morePosts} />}

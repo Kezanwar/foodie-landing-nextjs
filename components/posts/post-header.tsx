@@ -5,6 +5,7 @@ import PostTitle from './post-title';
 import Categories from './categories';
 import SectionSeparator from './section-separator';
 import ReadTime from './read-time';
+import Tags from './tags';
 
 export default function PostHeader({
   title,
@@ -12,7 +13,8 @@ export default function PostHeader({
   date,
   author,
   categories,
-  restaurant_review_fields
+  restaurant_review_fields,
+  tags
 }) {
   return (
     <>
@@ -26,7 +28,7 @@ export default function PostHeader({
           <Avatar author={author} /> <div className="h-4 w-[1px] bg-gray-200" />{' '}
           <Date dateString={date} />
         </div>
-        <Categories categories={categories} />
+        <Tags tags={tags} />
         <SectionSeparator />
         <ReadTime time={restaurant_review_fields.readTime} />
       </div>
