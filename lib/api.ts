@@ -218,3 +218,41 @@ export async function getPostAndMorePosts(slug, preview, previewData) {
 
   return data;
 }
+
+export async function getPrivacyPolicyPage() {
+  const data = await fetchAPI(
+    `
+    query PrivacyPolicyQuery {
+    pages(where: {title: "Privacy Policy"}) {
+    edges {
+      node {
+        id
+        content
+        title
+        date
+      }
+    }
+  }
+  }`
+  );
+  return data;
+}
+
+export async function getTermsAndConditionsPage() {
+  const data = await fetchAPI(
+    `
+    query PrivacyPolicyQuery {
+    pages(where: {title: "Terms and Conditions"}) {
+    edges {
+      node {
+        id
+        content
+        title
+        date
+      }
+    }
+  }
+  }`
+  );
+  return data;
+}
