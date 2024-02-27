@@ -104,6 +104,40 @@ export async function getAllPostsForHome(preview) {
 
   return data?.posts;
 }
+export async function getRecentPostsForNativeApp(preview) {
+  const data = await fetchAPI(
+    `
+    query AllPosts {
+      posts(first: 5, where: { orderby: { field: DATE, order: DESC } }) {
+        edges {
+          node {
+            title
+            excerpt
+            slug
+            date
+            restaurant_review_fields {
+            readTime
+            }
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+          }
+        }
+      }
+    }
+  `,
+    {
+      variables: {
+        onlyEnabled: !preview,
+        preview
+      }
+    }
+  );
+
+  return data?.posts;
+}
 
 export async function getPostAndMorePosts(slug, preview, previewData) {
   const postPreview = preview && previewData?.post;
