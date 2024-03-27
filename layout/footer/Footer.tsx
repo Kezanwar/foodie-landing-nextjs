@@ -1,9 +1,40 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 
 import { FooterContainer, FooterGrid } from './styles';
 import Logo from 'components/logo';
 import { Container } from 'components/container';
+import Link from 'next/link';
+
+type ILink = {
+  text: string;
+  url: string;
+};
+
+const COMPANY_LINKS: ILink[] = [
+  { text: 'About us', url: '/about-us' },
+  { text: 'Meet the team', url: '/meet-the-team' },
+  { text: 'FAQ', url: '/faq' }
+];
+
+const PRODUCT_LINKS: ILink[] = [
+  { text: 'Support', url: '/support' },
+  { text: 'Pricing', url: '/pricing' },
+  { text: 'Testimonials', url: '/testimonials' }
+];
+
+const LEGAL_LINKS: ILink[] = [
+  { text: 'Terms and conditions', url: '/terms-and-conditions' },
+  { text: 'Privacy Policy', url: '/privacy-policy' }
+];
+
+const FooterLink: FC<{ link: ILink }> = ({ link }) => {
+  return (
+    <Typography color={'text.primary'} variant="body2">
+      <Link href={link.url}>{link.text}</Link>
+    </Typography>
+  );
+};
 
 const Footer = () => {
   return (
@@ -13,7 +44,7 @@ const Footer = () => {
           <Box letterSpacing={-0.5}>
             <Logo />
             <Typography mt={1} variant="body2">
-              © foodie limited
+              © The Foodie Marketing Company Ltd
             </Typography>
             <Typography variant="body2">all rights reserved</Typography>
           </Box>
@@ -28,9 +59,9 @@ const Footer = () => {
             }}
           >
             <Typography variant="h6">Company</Typography>
-            <Typography variant="body2">About us</Typography>
-            <Typography variant="body2">Meet the team</Typography>
-            <Typography variant="body2">FAQ</Typography>
+            {COMPANY_LINKS.map((link) => (
+              <FooterLink key={link.url} link={link} />
+            ))}
           </Box>
           <Box
             sx={{
@@ -42,9 +73,9 @@ const Footer = () => {
             }}
           >
             <Typography variant="h6">Product</Typography>
-            <Typography variant="body2">Help guide</Typography>
-            <Typography variant="body2">Pricing</Typography>
-            <Typography variant="body2">Testimonials</Typography>
+            {PRODUCT_LINKS.map((link) => (
+              <FooterLink key={link.url} link={link} />
+            ))}
           </Box>
           <Box
             sx={{
@@ -56,9 +87,9 @@ const Footer = () => {
             }}
           >
             <Typography variant="h6">Legals</Typography>
-            <Typography variant="body2">Terms and conditions</Typography>
-            <Typography variant="body2">Privacy policy</Typography>
-            <Typography variant="body2">Support</Typography>
+            {LEGAL_LINKS.map((link) => (
+              <FooterLink key={link.url} link={link} />
+            ))}
           </Box>
         </FooterGrid>
       </Container>

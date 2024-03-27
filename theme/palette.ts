@@ -2,7 +2,13 @@ import { alpha } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
-export type ColorSchema = 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'error';
+export type ColorSchema =
+  | 'primary'
+  | 'secondary'
+  | 'info'
+  | 'success'
+  | 'warning'
+  | 'error';
 
 declare module '@mui/material/styles/createPalette' {
   interface TypeBackground {
@@ -110,7 +116,7 @@ const COMMON = {
 };
 
 export default function palette(themeMode: 'light' | 'dark') {
-   const light = {
+  const light = {
     ...COMMON,
     mode: 'light',
     text: {
