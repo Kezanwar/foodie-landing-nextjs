@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
-import { Button, Typography, styled } from '@mui/material';
+import { Typography, styled } from '@mui/material';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 

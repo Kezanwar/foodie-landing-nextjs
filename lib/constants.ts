@@ -16,6 +16,8 @@ export const serverPath = (staticFilePath: string) => {
 
 export const APP_ENV = process.env.NEXT_PUBLIC_APP_ENV;
 
+export const GLEAP_API_KEY = process.env.NEXT_PUBLIC_GLEAP_API_KEY;
+
 export const RESTAURANT_DASHBOARD_URL =
   process.env.NEXT_PUBLIC_RESTAURANT_DASHBOARD;
 

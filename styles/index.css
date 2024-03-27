@@ -30,6 +30,7 @@ html {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 img,
@@ -140,4 +141,11 @@ video {
 
 .is-layout-flex > * {
   flex: 1;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #e05f23, #f27b44);
+  font-size: 14px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
