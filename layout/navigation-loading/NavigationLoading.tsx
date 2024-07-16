@@ -37,7 +37,7 @@ export default function NavigationLoading() {
     };
   }, [router.events]);
 
-  if (!isLoading) return null;3
+  if (!isLoading) return null;
 
   return <LoadingScreen />;
 }

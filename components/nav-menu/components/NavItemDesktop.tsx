@@ -9,6 +9,7 @@ export const NavItemDesktop = styled(ListItemButton, {
 
   const activeStyle = {
     color: theme.palette.primary.main,
+    // fontWeight: 'bold',
 
     ...(!isLight && {
       color: theme.palette.primary.light
