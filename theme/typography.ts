@@ -30,7 +30,7 @@ export function responsiveFontSizes({
   };
 }
 
-const FONT_PRIMARY = "'Poppins', sans-serif"; // Google Font
+const FONT_PRIMARY = "'Manrope', sans-serif"; // Google Font
 
 // ----------------------------------------------------------------------
 

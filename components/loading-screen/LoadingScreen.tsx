@@ -4,6 +4,7 @@ import { styled } from '@mui/material/styles';
 import { Typography } from '@mui/material';
 
 import animationData from 'assets/lottie/foodie-loading.json';
+import Logo from 'components/logo';
 
 const lottieOptions = {
   animationData,
@@ -34,26 +35,16 @@ const StyledRoot = styled('div')(({ theme }) => ({
   backgroundColor: theme.palette.background.default
 }));
 
-const LoadingContainer = styled('div')(({ theme }) => ({
+const LoadingContainer = styled('div')(() => ({
   marginTop: '-30px',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  flexDirection: 'column'
-}));
-
-const LogoText = styled(Typography)(({ theme }) => ({
-  marginTop: '-50px',
-  fontSize: theme.spacing(14),
-  letterSpacing: theme.spacing(-1),
-  width: 'max-content',
-  paddingRight: theme.spacing(2),
-  paddingLeft: theme.spacing(2),
-  fontWeight: 'bold',
-  textTransform: 'lowercase',
-  background: `-webkit-linear-gradient(45deg, ${theme.palette.primary.main} 10%, ${theme.palette.primary.lighter} 90%)`,
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent'
+  flexDirection: 'column',
+  ['.logo']: {
+    width: '300px',
+    marginTop: '-30px'
+  }
 }));
 
 export default function LoadingScreen() {
@@ -61,7 +52,7 @@ export default function LoadingScreen() {
     <StyledRoot>
       <LoadingContainer>
         <LoadinLottie />
-        <LogoText>Foodie</LogoText>
+        <Logo />
       </LoadingContainer>
     </StyledRoot>
   );
