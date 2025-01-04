@@ -52,7 +52,7 @@ export default function LoadingScreen() {
     <StyledRoot>
       <LoadingContainer>
         <LoadinLottie />
-        <Logo />
+        <Logo size="md" />
       </LoadingContainer>
     </StyledRoot>
   );
