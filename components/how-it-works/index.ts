@@ -1,2 +1,3 @@
-import HowItWorksCustomer from "./HowItWorksCustomer";
-export {HowItWorksCustomer}
+import HowItWorksCustomer from './HowItWorksCustomer';
+import HowItWorksPartner from './HowItWorksPartner';
+export { HowItWorksCustomer, HowItWorksPartner };

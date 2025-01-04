@@ -3,19 +3,13 @@ import { useTheme, Typography } from '@mui/material';
 
 import { Container } from 'components/container';
 import { BlurIcon } from 'components/blur-icon';
+import useIsMobile from 'hooks/useIsMobile';
 
 type Props = {};
 
 const FeaturesCustomer: FC<Props> = (props) => {
   const theme = useTheme();
-  const [deviceIsMob, setDeviceIsMob] = useState<boolean>(false);
-
-  useEffect(() => {
-    const userAgent =
-      typeof window.navigator === 'undefined' ? '' : navigator.userAgent;
-    const mobile = Boolean(userAgent.match(/Android|iPhone|iPad|iPod/i));
-    setDeviceIsMob(mobile);
-  }, []);
+  const deviceIsMob = useIsMobile();
 
   return (
     <Container>
@@ -29,14 +23,14 @@ const FeaturesCustomer: FC<Props> = (props) => {
           icon="/static/icons/custom/heart-yellow.svg"
           title="Follow your favourites"
           color={theme.palette.warning.main}
-          copy="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente culpa vero atque."
+          copy="Get instant updates from your favourite restaurants, bars and coffee shops"
         />
         <BlurIcon
           deviceIsMob={deviceIsMob}
           title="Find amazing deals"
           icon="/static/icons/custom/fork-knife-primary.svg"
           color={theme.palette.primary.main}
-          copy="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente culpa vero atque."
+          copy="Discover deals and discounts that you never knew about wherever you are located."
         />
 
         <BlurIcon
@@ -44,7 +38,7 @@ const FeaturesCustomer: FC<Props> = (props) => {
           title="Free forever"
           color={theme.palette.success.main}
           icon="/static/icons/custom/star-success.svg"
-          copy="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente culpa vero atque."
+          copy="No subscription fees, no hidden costs. Forever."
         />
       </div>
     </Container>

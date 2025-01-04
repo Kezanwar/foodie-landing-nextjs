@@ -11,7 +11,7 @@ const iconBtnStyles = {
 
 const iconBtnIconStyles = { fontSize: 80 };
 
-const HowItWorks: React.FC = () => {
+const HowItWorksPartner: React.FC = () => {
   const vidRef = useRef<HTMLVideoElement>(null);
 
   const [playing, setPlaying] = useState(false);
@@ -49,9 +49,8 @@ const HowItWorks: React.FC = () => {
             It couldn't be easier...
           </Typography>
           <Typography variant="body1" mb={4} color={'text.secondary'}>
-            Download the app, set your preferences, and dive in! Explore nearby
-            restaurants, cafes, and bars, find deals, and book in seconds — it’s
-            that easy.
+            Partnering with Foodie is quick and easy — register in under 10
+            minutes, then start adding locations and deals!
           </Typography>
 
           <ActionBtn>Get started</ActionBtn>
@@ -86,4 +85,4 @@ const HowItWorks: React.FC = () => {
   );
 };
 
-export default HowItWorks;
+export default HowItWorksPartner;

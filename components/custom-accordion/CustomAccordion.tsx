@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import AddIcon from '@mui/icons-material/Add';
 import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
 import MuiAccordionSummary, {
@@ -91,7 +90,9 @@ const CustomAccordion: React.FC<Props> = ({ data }) => {
               <AddIcon />
             </AccordionSummary>
             <AccordionDetails>
-              <Typography variant="body2">{d.content}</Typography>
+              <Typography color={'text.primary'} variant="body1">
+                {d.content}
+              </Typography>
             </AccordionDetails>
           </Accordion>
         );

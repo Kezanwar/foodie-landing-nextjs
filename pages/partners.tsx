@@ -2,13 +2,14 @@ import Head from 'next/head';
 import { GetStaticProps } from 'next';
 
 import Layout from 'components/layout';
-import { HowItWorksCustomer } from 'components/how-it-works';
-import { FaqsCustomer } from 'components/faqs';
+import { HowItWorksPartner } from 'components/how-it-works';
+
 import { Spacer } from 'components/spacer';
 
 import { getAllPostsForHome } from 'lib/api';
 import HeroPartner from 'components/hero/HeroPartner';
 import FeaturesPartner from 'components/features/FeaturesPartner';
+import FaqsPartner from 'components/faqs/FaqsPartner';
 
 export default function Partners({ preview }) {
   return (
@@ -18,13 +19,13 @@ export default function Partners({ preview }) {
       </Head>
       <Spacer />
       <HeroPartner />
-      <Spacer sp={10} />
+      <Spacer sp={20} />
       <FeaturesPartner />
-      <Spacer sp={16} />
-      <HowItWorksCustomer />
-      <Spacer sp={16} />
-      <FaqsCustomer />
-      <Spacer sp={16} />
+      <Spacer sp={20} />
+      <HowItWorksPartner />
+      <Spacer sp={20} />
+      <FaqsPartner />
+      <Spacer sp={20} />
     </Layout>
   );
 }

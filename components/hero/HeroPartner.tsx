@@ -9,6 +9,7 @@ import { Container } from 'components/container';
 import { LightLoadingButton } from 'components/light-loading-button';
 import { RESTAURANT_DASHBOARD_URL } from 'lib/constants';
 import { LoadingButton } from '@mui/lab';
+import GradientText from 'components/gradient-text';
 
 type Props = {};
 
@@ -28,7 +29,7 @@ const HeroPartner: FC<Props> = () => {
     <Container>
       <div className="flex flex-col  justify-center items-center gap-4">
         <Typography textAlign={'center'} mb={2} variant="h2">
-          Partner Lorem ipsum dolor sit amet
+          Driving footfall, boosting revenue
         </Typography>
         <Typography
           textAlign={'center'}
@@ -36,9 +37,12 @@ const HeroPartner: FC<Props> = () => {
           variant="body1"
           color={'text.secondary'}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit a
-          consequuntur ex perferendis quis asperiores qui in beatae obcaecati
-          exercitationem.
+          The Foodie app serves as a powerful catalyst for the{' '}
+          <GradientText fontWeight={'bold'}>
+            Hospitality Industry,{' '}
+          </GradientText>
+          increasing footfall and revenue by connecting restaurants, bars, and
+          coffee shops with a vast community of food enthusiasts.
         </Typography>
       </div>
       <div className="flex  justify-center items-center py-8 gap-5">

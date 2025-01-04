@@ -150,8 +150,7 @@ video {
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #e05f23, #f27b44);
-  font-size: 14px;
+  background: linear-gradient(to right, #e07341, #eba07d, #ea7c49);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

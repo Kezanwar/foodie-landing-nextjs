@@ -6,6 +6,7 @@ import { Container } from 'components/container';
 import Layout from 'components/layout';
 import { LightLoadingButton } from 'components/light-loading-button';
 import TryIcon from '@mui/icons-material/Try';
+import GradientText from 'components/gradient-text';
 
 export default function Support({ preview }) {
   return (
@@ -32,10 +33,10 @@ export default function Support({ preview }) {
               variant="body2"
             >
               {`Welcome to Foodie Support! Your go-to resource for all things Foodie. Whether you're a customer or partner, or just starting out, find answers to general platform knowledge questions, or start a conversation with us using our`}
-              <Typography component={'span'} className="gradient-text">
+              <GradientText fontWeight={'bold'}>
                 {' '}
                 AI powered support tool.
-              </Typography>
+              </GradientText>
             </Typography>
             <Box display={'flex'} justifyContent={'center'}>
               <LightLoadingButton

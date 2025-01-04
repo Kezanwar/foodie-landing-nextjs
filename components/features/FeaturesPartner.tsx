@@ -3,19 +3,13 @@ import { useTheme, Typography } from '@mui/material';
 
 import { Container } from 'components/container';
 import { BlurIcon } from 'components/blur-icon';
+import useIsMobile from 'hooks/useIsMobile';
 
 type Props = {};
 
 const FeaturesPartner: FC<Props> = (props) => {
   const theme = useTheme();
-  const [deviceIsMob, setDeviceIsMob] = useState<boolean>(false);
-
-  useEffect(() => {
-    const userAgent =
-      typeof window.navigator === 'undefined' ? '' : navigator.userAgent;
-    const mobile = Boolean(userAgent.match(/Android|iPhone|iPad|iPod/i));
-    setDeviceIsMob(mobile);
-  }, []);
+  const deviceIsMob = useIsMobile();
 
   return (
     <Container>
@@ -29,22 +23,22 @@ const FeaturesPartner: FC<Props> = (props) => {
           icon="/static/icons/custom/announce.svg"
           title="Expand your reach"
           color={theme.palette.warning.main}
-          copy="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente culpa vero atque."
+          copy="Foodie helps you to reach a wider audience, attracting local and nearby foodies."
         />
         <BlurIcon
           deviceIsMob={deviceIsMob}
-          title="Get more bookings"
+          title="Increase footfall"
           icon="/static/icons/custom/fork-knife-primary.svg"
           color={theme.palette.primary.main}
-          copy="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente culpa vero atque."
+          copy="Foodie showcases your unique promotions to a vast community of food enthusiasts."
         />
 
         <BlurIcon
           deviceIsMob={deviceIsMob}
-          title="Increase revenue"
+          title="Boost revenue"
           color={theme.palette.success.main}
           icon="/static/icons/custom/money.svg"
-          copy="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente culpa vero atque."
+          copy="Through driving bookings and enticing diners to explore your full-price menu."
         />
       </div>
     </Container>

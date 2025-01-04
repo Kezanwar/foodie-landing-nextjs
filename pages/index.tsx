@@ -16,13 +16,13 @@ export default function Index({ preview }) {
       </Head>
       <Spacer />
       <HeroCustomer />
-      <Spacer sp={10} />
+      <Spacer sp={20} />
       <FeaturesCustomer />
-      <Spacer sp={16} />
+      <Spacer sp={20} />
       <HowItWorksCustomer />
-      <Spacer sp={16} />
+      <Spacer sp={20} />
       <FaqsCustomer />
-      <Spacer sp={16} />
+      <Spacer sp={20} />
     </Layout>
   );
 }

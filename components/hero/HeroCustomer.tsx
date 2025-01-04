@@ -3,6 +3,7 @@ import { Typography } from '@mui/material';
 
 import { Container } from 'components/container';
 import Image from 'next/image';
+import GradientText from 'components/gradient-text';
 
 type Props = {};
 
@@ -11,17 +12,19 @@ const HeroCustomer: FC<Props> = (props) => {
     <Container>
       <div className="flex flex-col  justify-center items-center gap-3">
         <Typography textAlign={'center'} mb={2} variant="h2">
-          Customer Lorem ipsum dolor sit amet
+          Local food deals you never knew about
         </Typography>
         <Typography
           textAlign={'center'}
-          className="xl:w-[60%]"
+          className="xl:w-[45%]"
           variant="body1"
           color={'text.secondary'}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit a
-          consequuntur ex perferendis quis asperiores qui in beatae obcaecati
-          exercitationem.
+          Discovering local gems has never been easier — Foodie puts hidden
+          specials and the best food deals{' '}
+          <GradientText fontWeight={'bold'}>
+            right at your fingertips!
+          </GradientText>
         </Typography>
       </div>
       <div className="flex h-max -my-[20px]  justify-center items-center gap-3">

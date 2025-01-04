@@ -7,16 +7,15 @@ import { Box, Typography } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
-type Props = {
-  sx?: SxProps;
-  disabledLink?: boolean;
+type SVGProps = {
+  width: string;
 };
 
-const SVG = () => {
+const SVG = ({ width }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="180"
+      width={width}
       // height="325"
       fill="none"
       className="logo"
@@ -44,8 +43,14 @@ const SVG = () => {
   );
 };
 
+type Props = {
+  sx?: SxProps;
+  disabledLink?: boolean;
+  size: 'sm' | 'md';
+};
+
 const Logo: FC<Props> = forwardRef(
-  ({ disabledLink = false, sx, ...other }, ref) => {
+  ({ disabledLink = false, sx, size = 'md', ...other }, ref) => {
     const logo = (
       <Box
         ref={ref}
@@ -55,7 +60,7 @@ const Logo: FC<Props> = forwardRef(
         }}
         {...other}
       >
-        <SVG />
+        <SVG width={size === 'md' ? '160' : '120'} />
       </Box>
     );
 
