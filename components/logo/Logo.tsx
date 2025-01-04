@@ -11,7 +11,7 @@ type SVGProps = {
   width: string;
 };
 
-const SVG = ({ width }) => {
+const SVG: FC<SVGProps> = ({ width }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ const SVG = ({ width }) => {
 type Props = {
   sx?: SxProps;
   disabledLink?: boolean;
-  size: 'sm' | 'md';
+  size?: 'sm' | 'md';
 };
 
 const Logo: FC<Props> = forwardRef(
