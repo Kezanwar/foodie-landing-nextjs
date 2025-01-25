@@ -10,6 +10,7 @@ import { getAllPostsForHome } from 'lib/api';
 import HeroPartner from 'components/hero/HeroPartner';
 import FeaturesPartner from 'components/features/FeaturesPartner';
 import FaqsPartner from 'components/faqs/FaqsPartner';
+import PricingTable from 'components/pricing';
 
 export default function Partners({ preview }) {
   return (
@@ -21,6 +22,8 @@ export default function Partners({ preview }) {
       <HeroPartner />
       <Spacer sp={20} />
       <FeaturesPartner />
+      <Spacer sp={20} />
+      <PricingTable />
       <Spacer sp={20} />
       <HowItWorksPartner />
       <Spacer sp={20} />
