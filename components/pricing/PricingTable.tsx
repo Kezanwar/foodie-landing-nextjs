@@ -52,7 +52,7 @@ const PricingWrapper = styled(Stack)(({ theme }) => ({
 const PricingTable = () => {
   return (
     <Container>
-      <Typography textAlign={'center'} className="mb-12" variant="h2">
+      <Typography textAlign={'center'} mb={6} variant="h2">
         Pricing
       </Typography>
       <PricingWrapper>
