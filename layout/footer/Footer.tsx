@@ -24,8 +24,11 @@ const PRODUCT_LINKS: ILink[] = [
 ];
 
 const LEGAL_LINKS: ILink[] = [
-  { text: 'Terms and conditions', url: '/terms-and-conditions' },
-  { text: 'Privacy Policy', url: '/privacy-policy' }
+  { text: "Partner T's and C's", url: '/partner-terms-and-conditions' },
+  { text: 'Privacy Policy', url: '/privacy-policy' },
+  { text: 'End User License Agreement', url: '/end-user-license-agreement' },
+  { text: 'Cookies Policy', url: '/cookies-policy' },
+  { text: 'Acceptable Use Policy', url: '/acceptable-use-policy' }
 ];
 
 const FooterLink: FC<{ link: ILink }> = ({ link }) => {

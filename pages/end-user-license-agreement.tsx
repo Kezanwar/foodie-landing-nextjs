@@ -10,7 +10,7 @@ import Layout from 'components/layout';
 import PostTitle from 'components/posts/post-title';
 import styles from 'components/posts/post-body.module.css';
 
-import { getTermsAndConditionsPage } from 'lib/api';
+import { getEULA } from 'lib/api';
 
 export default function TermsAndConditions({ page, preview }) {
   const router = useRouter();
@@ -23,18 +23,14 @@ export default function TermsAndConditions({ page, preview }) {
     <Layout preview={preview}>
       <Container>
         <Head>
-          <title>{'Terms and Conditions | Foodie'}</title>
-          <meta
-            property="og:image"
-            // content={post.featuredImage?.node.sourceUrl}
-          />
+          <title>{'EULA | Foodie'}</title>
         </Head>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
             <Typography textAlign={'center'} mb={2} variant="h2">
-              Terms and Conditions
+              End User License Agreement
             </Typography>
             <Typography
               fontSize={13}
@@ -57,7 +53,7 @@ export default function TermsAndConditions({ page, preview }) {
 }
 
 export const getStaticProps: GetStaticProps = async ({}) => {
-  const data = await getTermsAndConditionsPage();
+  const data = await getEULA();
 
   return {
     props: {

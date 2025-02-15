@@ -1,18 +1,18 @@
 import { useRouter } from 'next/router';
 import ErrorPage from 'next/error';
-import Head from 'next/head';
-import { GetStaticProps } from 'next';
 import { Typography } from '@mui/material';
 import { format } from 'date-fns';
+import Head from 'next/head';
+import { GetStaticProps } from 'next';
 
 import { Container } from 'components/container';
 import Layout from 'components/layout';
 import PostTitle from 'components/posts/post-title';
 import styles from 'components/posts/post-body.module.css';
 
-import { getPrivacyPolicyPage } from 'lib/api';
+import { getPartnerSubscriptionTermsAndConditions } from 'lib/api';
 
-export default function PrivacyPolicy({ page, preview }) {
+export default function TermsAndConditions({ page, preview }) {
   const router = useRouter();
 
   if (!router.isFallback && !page) {
@@ -23,14 +23,14 @@ export default function PrivacyPolicy({ page, preview }) {
     <Layout preview={preview}>
       <Container>
         <Head>
-          <title>{'Privacy Policy | Foodie'}</title>
+          <title>{"Partner T's and C's | Foodie"}</title>
         </Head>
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
             <Typography textAlign={'center'} mb={2} variant="h2">
-              Privacy Policy
+              Partner Terms and Conditions
             </Typography>
             <Typography
               fontSize={13}
@@ -53,7 +53,7 @@ export default function PrivacyPolicy({ page, preview }) {
 }
 
 export const getStaticProps: GetStaticProps = async ({}) => {
-  const data = await getPrivacyPolicyPage();
+  const data = await getPartnerSubscriptionTermsAndConditions();
 
   return {
     props: {

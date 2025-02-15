@@ -27,6 +27,8 @@ async function fetchAPI(query = '', { variables }: Record<string, any> = {}) {
   return json.data;
 }
 
+// ------- POSTS ---------
+
 export async function getPreviewPost(id, idType = 'DATABASE_ID') {
   const data = await fetchAPI(
     `
@@ -253,11 +255,13 @@ export async function getPostAndMorePosts(slug, preview, previewData) {
   return data;
 }
 
-export async function getPrivacyPolicyPage() {
-  const data = await fetchAPI(
+// ------ PAGES --------
+
+async function getPage(pageID: number) {
+  return fetchAPI(
     `
     query PrivacyPolicyQuery {
-    pages(where: {title: "Privacy Policy"}) {
+    pages(where: {id: ${pageID}}) {
     edges {
       node {
         id
@@ -269,24 +273,29 @@ export async function getPrivacyPolicyPage() {
   }
   }`
   );
+}
+
+export async function getPrivacyPolicyPage() {
+  const data = await getPage(59);
   return data;
 }
 
-export async function getTermsAndConditionsPage() {
-  const data = await fetchAPI(
-    `
-    query PrivacyPolicyQuery {
-    pages(where: {title: "Terms and Conditions"}) {
-    edges {
-      node {
-        id
-        content
-        title
-        date
-      }
-    }
-  }
-  }`
-  );
+export async function getPartnerSubscriptionTermsAndConditions() {
+  const data = await getPage(55);
+  return data;
+}
+
+export async function getEULA() {
+  const data = await getPage(63);
+  return data;
+}
+
+export async function getCookiesPolicy() {
+  const data = await getPage(61);
+  return data;
+}
+
+export async function getAcceptableUsePolicy() {
+  const data = await getPage(57);
   return data;
 }
