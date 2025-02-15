@@ -46,7 +46,10 @@ export default function PricingPlanCard({ card }) {
             component="span"
             sx={{ alignSelf: 'center', color: 'text.secondary' }}
           >
-            /mo
+            /mo{' '}
+            <Typography component={'span'} variant="caption">
+              incl VAT
+            </Typography>
           </Typography>
         )}
       </Stack>
