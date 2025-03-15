@@ -2,13 +2,8 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["7Q3BKQ2F37.com.thefoodie.app"],
-        "components": [
-          {
-            "/": "/single-restaurant/*",
-            "comment": "View a particular restaurant"
-          }
-        ]
+        "appID": "7Q3BKQ2F37.com.thefoodie.app",
+        "paths": ["/single-restaurant/*"]
       }
     ],
   "activitycontinuation": {
