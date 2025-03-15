@@ -10,6 +10,12 @@
           }
         ]
       }
-    ]
+    ],
+  "activitycontinuation": {
+    "apps": ["7Q3BKQ2F37.com.thefoodie.app"]
+  },
+  "webcredentials": {
+    "apps": ["7Q3BKQ2F37.com.thefoodie.app"]
+  }
   }
 }
