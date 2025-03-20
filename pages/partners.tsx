@@ -20,15 +20,15 @@ export default function Partners({ preview }) {
       </Head>
       <Spacer />
       <HeroPartner />
-      <Spacer sp={20} />
+      <Spacer sp={16} />
       <FeaturesPartner />
-      <Spacer sp={20} />
-      <PricingTable />
-      <Spacer sp={20} />
+      <Spacer sp={16} />
       <HowItWorksPartner />
-      <Spacer sp={20} />
+      <Spacer sp={16} />
+      <PricingTable />
+      <Spacer sp={16} />
       <FaqsPartner />
-      <Spacer sp={20} />
+      <Spacer sp={16} />
     </Layout>
   );
 }

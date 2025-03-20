@@ -50,7 +50,7 @@ export const _pricingPlans = [
 
 const PricingWrapper = styled(Stack)(({ theme }) => ({
   flexDirection: 'row',
-  gap: 16,
+  gap: 48,
   [theme.breakpoints.down('md')]: {
     flexDirection: 'column'
   }
