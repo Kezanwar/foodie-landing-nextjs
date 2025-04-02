@@ -57,7 +57,7 @@ const HowItWorksPartner: React.FC = () => {
         </div>
         <div className="relative scale-[0.8] lg:scale-[0.95] 2xl:scale-[0.8]">
           <img
-            src="https://foodie-s3.s3.eu-west-2.amazonaws.com/ipad-bg-new.png"
+            src="/static/images/ipad-bg-new.png"
             alt=""
             className="absolute pointer-events-none top-0 left-0 object-contain translate-x-[-15.9%] translate-y-[12%] scale-[1.398] z-[-1]"
           />
@@ -69,7 +69,7 @@ const HowItWorksPartner: React.FC = () => {
               className={`w-full h-full  rounded-[22px] ${
                 !playing ? 'brightness-[0.6]' : ''
               }`}
-              src="https://foodie-s3.s3.eu-west-2.amazonaws.com/sample-vid-how-we-work.mp4"
+              src="https://foodie-s3.s3.eu-west-2.amazonaws.com/assets/sample-vid-how-we-work.mp4"
             ></video>
             {!playing && (
               <div className="absolute top-0 left-0 rounded-[26px] flex items-center justify-center w-full h-full">
