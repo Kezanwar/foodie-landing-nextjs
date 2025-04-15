@@ -70,7 +70,7 @@ const HowItWorks: React.FC = () => {
               className={`w-full h-full  rounded-[22px] ${
                 !playing ? 'brightness-[0.6]' : ''
               }`}
-              src="https://foodie-s3.s3.eu-west-2.amazonaws.com/assets/sample-vid-how-we-work.mp4"
+              src="https://thefoodieappuk.s3.eu-north-1.amazonaws.com/assets/sample-vid-how-we-work.mp4"
             ></video>
             {!playing && (
               <div className="absolute top-0 left-0 rounded-[26px] flex items-center justify-center w-full h-full">
