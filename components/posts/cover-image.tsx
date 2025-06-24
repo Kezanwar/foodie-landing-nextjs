@@ -17,6 +17,7 @@ export default function CoverImage({ title, coverImage, slug }: Props) {
     <Image
       width={1000}
       height={200}
+      unoptimized
       style={{ width: '100%', height: '100%', objectFit: 'cover' }} // optional
       alt={`Cover Image for ${title}`}
       src={coverImage?.node.sourceUrl}
