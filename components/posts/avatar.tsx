@@ -16,6 +16,7 @@ export default function Avatar({ author }) {
           objectFit="cover"
           className="rounded-full"
           alt={name}
+          unoptimized
         />
       </div>
       <div className="text-md capitalize">{name}</div>
