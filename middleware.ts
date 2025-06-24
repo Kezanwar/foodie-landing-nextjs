@@ -29,6 +29,11 @@ const botUserAgents = [
 
 export function middleware(request: NextRequest) {
   const { pathname } = new URL(request.url);
+
+  if (pathname.includes('cms.thefoodie.app')) {
+    return NextResponse.next();
+  }
+
   const userAgent = request.headers.get('user-agent') || '';
   const isPathBlocked = pathBlockList.some((pattern) => pattern.test(pathname));
   const isBotAgent = botUserAgents.some((pattern) => pattern.test(userAgent));
@@ -43,7 +48,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    // Run middleware on all routes except static assets, image optimization, and API routes
+    // Run middleware on all routes except static assets , image optimization, and API routes
     '/((?!_next/static|_next/image|favicon.ico|api).*)'
   ]
 };
