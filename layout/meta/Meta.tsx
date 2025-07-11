@@ -53,6 +53,8 @@ export default function Meta() {
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta property="og:image" content={`${url}/static/images/OG_IMAGE.png`} />
       <meta property="og:image:alt" content="The Foodie App Icon" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="600" />
 
       {/* <!-- Twitter Meta Tags --> */}
       <meta property="twitter:domain" content={url} />
