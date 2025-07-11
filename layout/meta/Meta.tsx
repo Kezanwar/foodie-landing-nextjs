@@ -51,8 +51,6 @@ export default function Meta() {
         property="og:image"
         content={`${url}/static/images/foodie-og-image.png`}
       />
-      <meta property="og:image:width" content="1024" />
-      <meta property="og:image:height" content="1024" />
       <meta property="og:image:alt" content="The Foodie App Icon" />
 
       {/* <!-- Twitter Meta Tags --> */}
