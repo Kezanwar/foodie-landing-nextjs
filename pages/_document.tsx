@@ -28,7 +28,7 @@ export default function Document() {
           property="og:description"
           content="Local food deals you never knew about."
         />
-        <meta property="og:image" content={`${url}/static/plate-icob-lg.png`} />
+        <meta property="og:image" content={`${url}/static/plate-icon-lg.png`} />
         <meta property="og:image:width" content="1024" />
         <meta property="og:image:height" content="1024" />
         <meta property="og:image:alt" content="The Foodie App Icon" />
@@ -43,7 +43,7 @@ export default function Document() {
         />
         <meta
           name="twitter:image"
-          content={`${url}/static/plate-icob-lg.png`}
+          content={`${url}/static/plate-icon-lg.png`}
         />
       </Head>
       <body>
