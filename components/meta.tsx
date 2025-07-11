@@ -49,7 +49,7 @@ export default function Meta() {
       />
       <meta
         property="og:image"
-        content={`${url}/static/images/plate-icon-lg.png`}
+        content={`${url}/static/images/foodie-og-image.png`}
       />
       <meta property="og:image:width" content="1024" />
       <meta property="og:image:height" content="1024" />
@@ -65,7 +65,7 @@ export default function Meta() {
       />
       <meta
         name="twitter:image"
-        content={`${url}/static/images/plate-icon-lg.png`}
+        content={`${url}/static/images/foodie-og-image.png`}
       />
     </Head>
   );
