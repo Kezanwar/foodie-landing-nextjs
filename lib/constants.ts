@@ -16,6 +16,10 @@ export const serverPath = (staticFilePath: string) => {
 
 export const APP_ENV = process.env.NEXT_PUBLIC_APP_ENV;
 
+export const isDev = APP_ENV === 'development';
+export const isStaging = APP_ENV === 'staging';
+export const isProd = APP_ENV === 'production';
+
 export const GLEAP_API_KEY = process.env.NEXT_PUBLIC_GLEAP_API_KEY;
 
 export const RESTAURANT_DASHBOARD_URL =
