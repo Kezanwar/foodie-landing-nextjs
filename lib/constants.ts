@@ -20,6 +20,13 @@ export const isDev = APP_ENV === 'development';
 export const isStaging = APP_ENV === 'staging';
 export const isProd = APP_ENV === 'production';
 
+export const DOMAIN =
+  {
+    ['development']: 'http://localhost:3000',
+    ['staging']: 'https://thefoodiestaging.app',
+    ['production']: 'https://thefoodie.app'
+  }[APP_ENV] || '';
+
 export const GLEAP_API_KEY = process.env.NEXT_PUBLIC_GLEAP_API_KEY;
 
 export const RESTAURANT_DASHBOARD_URL =

@@ -1,11 +1,8 @@
-import { FC } from 'react';
+import { DOMAIN } from 'lib/constants';
 import Head from 'next/head';
 
-import { CMS_NAME, HOME_OG_IMAGE_URL } from 'lib/constants';
-
-type Props = {};
-
-const Meta: FC<Props> = (props) => {
+export default function Meta() {
+  const url = DOMAIN;
   return (
     <Head>
       <link
@@ -31,18 +28,45 @@ const Meta: FC<Props> = (props) => {
         href="/favicon/safari-pinned-tab.svg"
         color="#000000"
       />
+
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
       <meta name="msapplication-TileColor" content="#000000" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#000" />
-      <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+      {/* <!-- HTML Meta Tags --> */}
       <meta
         name="description"
-        content={`A statically generated blog example using Next.js and ${CMS_NAME}.`}
+        content="Local food deals you never knew about."
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+
+      {/* <!-- Open Graph Meta Tags --> */}
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="The Foodie App" />
+      <meta
+        property="og:description"
+        content="Local food deals you never knew about."
+      />
+      <meta
+        property="og:image"
+        content={`${url}/static/images/plate-icon-lg.png`}
+      />
+      <meta property="og:image:width" content="1024" />
+      <meta property="og:image:height" content="1024" />
+      <meta property="og:image:alt" content="The Foodie App Icon" />
+
+      {/* <!-- Twitter Meta Tags --> */}
+      <meta property="twitter:domain" content={url} />
+      <meta property="twitter:url" content={url} />
+      <meta name="twitter:title" content="The Foodie App" />
+      <meta
+        name="twitter:description"
+        content="Local food deals you never knew about."
+      />
+      <meta
+        name="twitter:image"
+        content={`${url}/static/images/plate-icon-lg.png`}
+      />
     </Head>
   );
-};
-
-export default Meta;
+}
