@@ -51,10 +51,13 @@ export default function Meta() {
       <meta property="og:locale" content="en_US" />
       <meta name="apple-mobile-web-app-title" content="The Foodie App" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta property="og:image" content={`${url}/static/images/OG_IMAGE.png`} />
+      <meta
+        property="og:image"
+        content={`${url}/static/images/foodie-og-image.png`}
+      />
       <meta property="og:image:alt" content="The Foodie App Icon" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="600" />
+      <meta property="og:image:width" content="400" />
+      <meta property="og:image:height" content="400" />
 
       {/* <!-- Twitter Meta Tags --> */}
       <meta property="twitter:domain" content={url} />
@@ -66,7 +69,7 @@ export default function Meta() {
       />
       <meta
         name="twitter:image"
-        content={`${url}/static/images/OG_IMAGE.png`}
+        content={`${url}/static/images/foodie-og-image.png`}
       />
     </Head>
   );
