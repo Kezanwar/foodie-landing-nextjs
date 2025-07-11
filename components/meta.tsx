@@ -47,6 +47,10 @@ export default function Meta() {
         property="og:description"
         content="Local food deals you never knew about."
       />
+      <meta property="og:site_name" content="The Foodie App" />
+      <meta property="og:locale" content="en_US" />
+      <meta name="apple-mobile-web-app-title" content="The Foodie App" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta
         property="og:image"
         content={`${url}/static/images/foodie-og-image.png`}
