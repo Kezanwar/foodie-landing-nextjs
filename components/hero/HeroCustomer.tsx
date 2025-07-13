@@ -51,20 +51,20 @@ const HeroCustomer: FC<Props> = (props) => {
           width={275}
           alt="phone"
           className="hidden md:block"
-          src={'/static/images/phone.png'}
+          src={'/static/images/phone-following.png'}
         />
         <Image
           height={300}
           width={300}
           alt="phone"
           className="hidden md:block"
-          src={'/static/images/phone.png'}
+          src={'/static/images/phone-feed.png'}
         />
         <Image
           height={300}
           width={275}
           alt="phone"
-          src={'/static/images/phone.png'}
+          src={'/static/images/phone-discover.png'}
         />
       </div>
     </Container>
