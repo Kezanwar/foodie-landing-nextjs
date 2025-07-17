@@ -20,6 +20,8 @@ async function fetchAPI(query = '', { variables }: Record<string, any> = {}) {
       })
     });
 
+    console.log(res);
+
     const json = await res.json();
 
     if (json.errors) {
