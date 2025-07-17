@@ -29,6 +29,7 @@ async function fetchAPI(query = '', { variables }: Record<string, any> = {}) {
     return json.data;
   } catch (error) {
     console.log(error);
+    throw error;
   }
 }
 
