@@ -5,7 +5,7 @@ export default async function recent(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const posts = await getRecentPostsForNativeApp(null);
+  const posts = await getRecentPostsForNativeApp();
   if (!posts) {
     return res.status(401).json({ message: 'Posts not found' });
   }
