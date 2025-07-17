@@ -20,8 +20,11 @@ async function fetchAPI(query = '', { variables }: Record<string, any> = {}) {
       })
     });
 
-    console.log(res);
+    console.log(res.status);
 
+    const txt = await res.text();
+
+    console.log(txt);
     const json = await res.json();
 
     if (json.errors) {
