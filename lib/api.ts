@@ -9,22 +9,27 @@ async function fetchAPI(query = '', { variables }: Record<string, any> = {}) {
     ] = `Bearer ${process.env.WORDPRESS_AUTH_REFRESH_TOKEN}`;
   }
 
-  // WPGraphQL Plugin must be enabled
-  const res = await fetch(API_URL, {
-    headers,
-    method: 'POST',
-    body: JSON.stringify({
-      query,
-      variables
-    })
-  });
+  try {
+    // WPGraphQL Plugin must be enabled
+    const res = await fetch(API_URL, {
+      headers,
+      method: 'POST',
+      body: JSON.stringify({
+        query,
+        variables
+      })
+    });
 
-  const json = await res.json();
-  if (json.errors) {
-    console.error(json.errors);
-    throw new Error('Failed to fetch API');
+    const json = await res.json();
+
+    if (json.errors) {
+      console.error(json.errors);
+      throw new Error('WP json has error');
+    }
+    return json.data;
+  } catch (error) {
+    console.log(error);
   }
-  return json.data;
 }
 
 // ------- POSTS ---------
