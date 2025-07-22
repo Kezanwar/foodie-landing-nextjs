@@ -65,9 +65,9 @@ const HeroPartner: FC<Props> = () => {
       <div className="flex  justify-center  pt-6 ">
         <Image
           height={700}
-          width={600}
+          width={800}
           alt="phone"
-          src={'/static/images/laptop-partners-example.png'}
+          src={'/static/images/macbook-deal.png'}
         />
       </div>
     </Container>

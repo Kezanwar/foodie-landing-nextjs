@@ -106,7 +106,7 @@ export async function getAllPostsForHome(preview) {
 
   return data?.posts;
 }
-export async function getRecentPostsForNativeApp(preview) {
+export async function getRecentPostsForNativeApp() {
   const data = await fetchAPI(
     `
     query AllPosts {
@@ -131,10 +131,7 @@ export async function getRecentPostsForNativeApp(preview) {
     }
   `,
     {
-      variables: {
-        onlyEnabled: !preview,
-        preview
-      }
+      variables: {}
     }
   );
 
