@@ -18,8 +18,8 @@ export default function Index({ preview }) {
       <HeroCustomer />
       <Spacer sp={16} />
       <FeaturesCustomer />
-      <Spacer sp={16} />
-      <HowItWorksCustomer />
+      {/* <Spacer sp={16} />
+      <HowItWorksCustomer /> */}
       <Spacer sp={16} />
       <FaqsCustomer />
       <Spacer sp={16} />
