@@ -22,8 +22,8 @@ export default function Partners({ preview }) {
       <HeroPartner />
       <Spacer sp={16} />
       <FeaturesPartner />
-      <Spacer sp={16} />
-      <HowItWorksPartner />
+      {/* <Spacer sp={16} />
+      <HowItWorksPartner /> */}
       <Spacer sp={16} />
       <PricingTable />
       <Spacer sp={16} />
