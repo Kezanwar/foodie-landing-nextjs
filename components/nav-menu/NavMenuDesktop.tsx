@@ -11,7 +11,7 @@ const NavMenuDesktop: FC<Props> = () => {
   const { pathname } = useRouter();
 
   return (
-    <div className=" ml-auto flex items-center gap-4">
+    <div className=" ml-auto flex items-center gap-2">
       {NAV_MENU_OPTIONS.map((menu_item, i) => {
         return (
           <React.Fragment key={menu_item.text}>
