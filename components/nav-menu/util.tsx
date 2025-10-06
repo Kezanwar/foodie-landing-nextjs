@@ -1,9 +1,10 @@
 import { ReactElement } from 'react';
 
-import CustomerBag from 'components/icons/CustomerBag';
+// import CustomerBag from 'components/icons/CustomerBag';
 import Read from 'components/icons/Read';
 import Store from 'components/icons/Store';
 import AutoAwesomeOutlinedIcon from '@mui/icons-material/AutoAwesomeOutlined';
+import FaceOutlinedIcon from '@mui/icons-material/FaceOutlined';
 
 export type MenuOption = {
   link: string;
@@ -14,8 +15,8 @@ export type MenuOption = {
 export const NAV_MENU_OPTIONS: Array<MenuOption> = [
   {
     link: '/',
-    icon: <CustomerBag />,
-    text: 'Customers'
+    icon: <FaceOutlinedIcon />,
+    text: 'Foodies'
   },
   {
     link: '/partners',
