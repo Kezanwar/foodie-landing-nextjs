@@ -30,22 +30,30 @@ const HeroCustomer: FC<Props> = (props) => {
           </Typography>
         </div>
         <div className="flex h-max -my-[20px]  justify-center items-center gap-3">
-          <button className="reset-btn">
+          <a
+            className="reset-btn"
+            href="https://apps.apple.com/gb/app/foodie/id6743999340"
+          >
             <Image
               height={100}
               width={175}
               src="static/icons/app-store/apple-app-store.svg"
               alt="download on the apple app store"
             />
-          </button>
-          <button className="reset-btn">
+          </a>
+          <div className="relative inline-block">
             <Image
               height={100}
               width={160}
               src="static/icons/app-store/google-play-store.svg"
-              alt="download on the apple app store"
+              alt="download on the google play store"
             />
-          </button>
+            <div className="absolute inset-0 bg-black/10 backdrop-blur-[3px] rounded-[13px] h-[50px] top-1/2 translate-y-[-50%] flex items-center justify-center pointer-events-none">
+              <span className="text-white font-bold text-sm">
+                Android Coming Soon
+              </span>
+            </div>
+          </div>
         </div>
         <div className="flex  justify-center items-end gap-3  pt-4">
           <Image
