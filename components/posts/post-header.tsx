@@ -22,7 +22,7 @@ export default function PostHeader({
         <CoverImage title={title} coverImage={coverImage} />
       </div>
 
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl">
         <PostTitle>{title}</PostTitle>
         <div className="mb-6 flex gap-3 items-center text-[14px] font-light">
           <Avatar author={author} /> <div className="h-4 w-[1px] bg-gray-200" />{' '}

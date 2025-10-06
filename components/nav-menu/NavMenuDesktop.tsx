@@ -20,7 +20,7 @@ const NavMenuDesktop: FC<Props> = () => {
                 {...menu_item}
                 active={pathname === menu_item.link}
               >
-                {menu_item.text}
+                {menu_item.icon} {menu_item.text}
               </NavItemDesktop>
             </Link>
             {i != NAV_MENU_OPTIONS.length - 1 ? (

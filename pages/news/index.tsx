@@ -9,6 +9,7 @@ import { Spacer } from 'components/spacer';
 import PostPreview from 'components/posts/post-preview';
 
 import { getAllPostsForHome } from 'lib/api';
+import FloatInView from 'components/float-in-view';
 
 export default function Index({ allPosts, preview }) {
   return (
@@ -19,21 +20,24 @@ export default function Index({ allPosts, preview }) {
       <Spacer />
 
       <Container>
-        <Typography textAlign={'center'} mb={3} variant="h2">
-          News & Insights
-        </Typography>
+        <FloatInView>
+          <Typography textAlign={'center'} mb={3} variant="h2">
+            News & Insights
+          </Typography>
+        </FloatInView>
         <div className="mt-8 lg:mt-12 grid  md:grid-cols-2 lg:grid-cols-3 gap-10">
           {allPosts?.edges?.map(({ node }) => (
-            <PostPreview
-              key={node.slug}
-              title={node.title}
-              coverImage={node.featuredImage}
-              date={node.date}
-              author={node.author}
-              slug={node.slug}
-              excerpt={node.excerpt}
-              restaurant_review_fields={node.restaurant_review_fields}
-            />
+            <FloatInView key={node.slug}>
+              <PostPreview
+                title={node.title}
+                coverImage={node.featuredImage}
+                date={node.date}
+                author={node.author}
+                slug={node.slug}
+                excerpt={node.excerpt}
+                restaurant_review_fields={node.restaurant_review_fields}
+              />
+            </FloatInView>
           ))}
         </div>
       </Container>
