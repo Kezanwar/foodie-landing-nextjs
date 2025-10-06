@@ -30,7 +30,7 @@ export const NavItemDesktop = styled(ListItemButton, {
     paddingRight: theme.spacing(1.5),
     color: theme.palette.text.secondary,
     borderRadius: theme.shape.borderRadius,
-
+    gap: theme.spacing(1),
     // Active item
     ...(active && {
       ...activeStyle,

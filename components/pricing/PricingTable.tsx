@@ -1,6 +1,7 @@
 import React from 'react';
 import PricingPlanCard from './PricingCard';
 import { Container, Stack, styled, Typography } from '@mui/material';
+import FloatInView from 'components/float-in-view';
 
 export const _pricingPlans = [
   {
@@ -59,14 +60,16 @@ const PricingWrapper = styled(Stack)(({ theme }) => ({
 const PricingTable = () => {
   return (
     <Container>
-      <Typography textAlign={'center'} mb={6} variant="h2">
-        Pricing
-      </Typography>
-      <PricingWrapper>
-        {_pricingPlans.map((card) => (
-          <PricingPlanCard key={card.subscription} card={card} />
-        ))}
-      </PricingWrapper>
+      <FloatInView>
+        <Typography textAlign={'center'} mb={6} variant="h2">
+          Pricing
+        </Typography>
+        <PricingWrapper>
+          {_pricingPlans.map((card) => (
+            <PricingPlanCard key={card.subscription} card={card} />
+          ))}
+        </PricingWrapper>
+      </FloatInView>
     </Container>
   );
 };

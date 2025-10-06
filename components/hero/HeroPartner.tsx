@@ -10,6 +10,8 @@ import { LightLoadingButton } from 'components/light-loading-button';
 import { RESTAURANT_DASHBOARD_URL } from 'lib/constants';
 import { LoadingButton } from '@mui/lab';
 import GradientText from 'components/gradient-text';
+import FloatInView from 'components/float-in-view';
+import RegisterButton from 'components/register-button';
 
 type Props = {};
 
@@ -27,49 +29,47 @@ export const BlackButton = styled(LoadingButton)(({ theme }) => ({
 const HeroPartner: FC<Props> = () => {
   return (
     <Container>
-      <div className="flex flex-col  justify-center items-center gap-4">
-        <Typography textAlign={'center'} mb={2} variant="h2">
-          Driving footfall, boosting revenue
-        </Typography>
-        <Typography
-          textAlign={'center'}
-          className="xl:w-[60%]"
-          variant="body1"
-          color={'text.secondary'}
-        >
-          The Foodie app serves as a powerful catalyst for the{' '}
-          <GradientText fontWeight={'bold'}>
-            Hospitality Industry,{' '}
-          </GradientText>
-          increasing footfall and revenue by connecting restaurants, bars, and
-          coffee shops with a vast community of food enthusiasts.
-        </Typography>
-      </div>
-      <div className="flex  justify-center items-center py-8 gap-5">
-        <a
-          className="text-inherit"
-          href={`${RESTAURANT_DASHBOARD_URL}/register`}
-        >
-          <LightLoadingButton sx={{ fontSize: 16, minWidth: 110 }}>
-            <AppRegistrationIcon sx={{ mr: 0.5 }} fontSize="small" /> Register
-          </LightLoadingButton>
-        </a>
+      <FloatInView>
+        <div className="flex flex-col  justify-center items-center gap-4">
+          <Typography textAlign={'center'} mb={2} variant="h2">
+            Driving footfall, boosting revenue
+          </Typography>
+          <Typography
+            textAlign={'center'}
+            className="xl:w-[60%]"
+            variant="body1"
+            color={'text.secondary'}
+          >
+            The Foodie app serves as a powerful catalyst for the{' '}
+            <GradientText fontWeight={'bold'}>
+              Hospitality Industry,{' '}
+            </GradientText>
+            increasing footfall and revenue by connecting restaurants, bars, and
+            coffee shops with a vast community of food enthusiasts.
+          </Typography>
+        </div>
+        <div className="flex  justify-center items-center py-8 gap-5">
+          <RegisterButton />
 
-        <a className="text-inherit" href={`${RESTAURANT_DASHBOARD_URL}/login`}>
-          <BlackButton variant="outlined" color="inherit">
-            Sign in <KeyboardArrowRightIcon fontSize="small" />
-          </BlackButton>
-        </a>
-      </div>
-      {/* <div className="flex flex-col lg:flex-row justify-center items-center gap-6 pt-8 "> */}
-      <div className="flex  justify-center  pt-6 ">
-        <Image
-          height={700}
-          width={800}
-          alt="phone"
-          src={'/static/images/macbook-deal.png'}
-        />
-      </div>
+          <a
+            className="text-inherit"
+            href={`${RESTAURANT_DASHBOARD_URL}/login`}
+          >
+            <BlackButton variant="outlined" color="inherit">
+              Sign in <KeyboardArrowRightIcon fontSize="small" />
+            </BlackButton>
+          </a>
+        </div>
+        {/* <div className="flex flex-col lg:flex-row justify-center items-center gap-6 pt-8 "> */}
+        <div className="flex  justify-center  pt-6 ">
+          <Image
+            height={700}
+            width={800}
+            alt="phone"
+            src={'/static/images/macbook-deal.png'}
+          />
+        </div>
+      </FloatInView>
     </Container>
   );
 };
