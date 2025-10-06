@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import Image from 'next/image';
-import { Typography, styled } from '@mui/material';
+import { Skeleton, Typography, styled } from '@mui/material';
 import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
@@ -12,6 +12,7 @@ import { LoadingButton } from '@mui/lab';
 import GradientText from 'components/gradient-text';
 import FloatInView from 'components/float-in-view';
 import RegisterButton from 'components/register-button';
+import LoadingNextImage from 'components/loading-image';
 
 type Props = {};
 
@@ -32,23 +33,50 @@ const HeroPartner: FC<Props> = () => {
       <FloatInView>
         <div className="flex flex-col  justify-center items-center gap-4">
           <Typography textAlign={'center'} mb={2} variant="h2">
-            Driving footfall, boosting revenue
+            {/* The platform built for restaurants — not distractions.
+             */}
+            No more cat videos stealing your spotlight
           </Typography>
           <Typography
             textAlign={'center'}
-            className="xl:w-[60%]"
+            className="xl:w-[50%]"
             variant="body1"
             color={'text.secondary'}
           >
-            The Foodie app serves as a powerful catalyst for the{' '}
+            An average Social Media post reaches 2% of your followers. The other
+            98% are busy sharing memes.
+          </Typography>
+          <Typography
+            textAlign={'center'}
+            className="xl:w-[50%]"
+            variant="body1"
+            color={'text.secondary'}
+          >
+            Our Platform: Your special offers, your happy hours,{' '}
+            <GradientText fontWeight={'bold'}>
+              visible 24/7 to foodies in your area.
+            </GradientText>{' '}
+          </Typography>
+          <Typography
+            textAlign={'center'}
+            className="xl:w-[50%]"
+            variant="body1"
+            color={'text.secondary'}
+          >
+            {' '}
+            No daily posts. No fiddly social media ads. No algorithms.{' '}
+            <strong>Just footfall.</strong>
+          </Typography>
+
+          {/* The Foodie app serves as a powerful catalyst for the{' '}
             <GradientText fontWeight={'bold'}>
               Hospitality Industry,{' '}
             </GradientText>
             increasing footfall and revenue by connecting restaurants, bars, and
-            coffee shops with a vast community of food enthusiasts.
-          </Typography>
+            coffee shops with a vast community of food enthusiasts. */}
+          {/* </Typography> */}
         </div>
-        <div className="flex  justify-center items-center py-8 gap-5">
+        <div className="flex  justify-center items-center py-8 mt-4 mb-4 gap-5">
           <RegisterButton />
 
           <a
@@ -61,8 +89,11 @@ const HeroPartner: FC<Props> = () => {
           </a>
         </div>
         {/* <div className="flex flex-col lg:flex-row justify-center items-center gap-6 pt-8 "> */}
-        <div className="flex  justify-center  pt-6 ">
-          <Image
+        <div className="flex  justify-center   ">
+          <LoadingNextImage
+            loadingFallback={
+              <Skeleton height={600} width={600} animation={'wave'} />
+            }
             height={700}
             width={800}
             alt="phone"

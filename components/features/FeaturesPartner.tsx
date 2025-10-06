@@ -32,7 +32,7 @@ const FeaturesPartner: FC<Props> = (props) => {
             title="Increase footfall"
             icon="/static/icons/custom/fork-knife-primary.svg"
             color={theme.palette.primary.main}
-            copy="Foodie showcases your unique promotions to a vast community of food enthusiasts."
+            copy="On social media, your post reaches just 2% of your followers. On Foodie, you reach 100% of people who actually want to eat out."
           />
 
           <BlurIcon
