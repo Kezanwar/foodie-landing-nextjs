@@ -1,10 +1,11 @@
 import React, { FC } from 'react';
-import { Typography } from '@mui/material';
+import { Skeleton, Typography } from '@mui/material';
 
 import { Container } from 'components/container';
 import Image from 'next/image';
 import GradientText from 'components/gradient-text';
 import FloatInView from 'components/float-in-view';
+import LoadingNextImage from 'components/loading-image';
 
 type Props = {};
 
@@ -56,21 +57,30 @@ const HeroCustomer: FC<Props> = (props) => {
           </div>
         </div>
         <div className="flex  justify-center items-end gap-3  pt-4">
-          <Image
+          <LoadingNextImage
+            loadingFallback={
+              <Skeleton height={300} width={275} animation={'wave'} />
+            }
             height={300}
             width={275}
             alt="phone"
             className="hidden md:block"
             src={'/static/images/phone-following.png'}
           />
-          <Image
+          <LoadingNextImage
+            loadingFallback={
+              <Skeleton height={300} width={300} animation={'wave'} />
+            }
             height={300}
             width={300}
             alt="phone"
             className="hidden md:block"
             src={'/static/images/phone-feed.png'}
           />
-          <Image
+          <LoadingNextImage
+            loadingFallback={
+              <Skeleton height={300} width={275} animation={'wave'} />
+            }
             height={300}
             width={275}
             alt="phone"
