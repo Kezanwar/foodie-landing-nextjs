@@ -110,7 +110,7 @@ export default function LaunchDealStepsTimeline() {
               color="text.secondary"
               variant="body2"
             >
-              Enter LAUNCH3 Discount Code at checkout for 3 months free
+              Hit the 3 Month Trial button on your tier. No card needed
             </Typography>
           </TimelineContent>
         </TimelineItem>

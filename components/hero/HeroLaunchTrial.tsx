@@ -1,12 +1,5 @@
-import React, { FC, useState } from 'react';
-import {
-  Typography,
-  IconButton,
-  InputAdornment,
-  TextField,
-  Snackbar
-} from '@mui/material';
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import React, { FC } from 'react';
+import { Typography } from '@mui/material';
 
 import { Container } from 'components/container';
 
@@ -16,16 +9,7 @@ import RegisterButton from 'components/register-button';
 
 type Props = {};
 
-const discountCode = 'LAUNCH3';
-
 const HeroLaunchTrial: FC<Props> = (props) => {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(discountCode);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 3000);
-  };
   return (
     <Container>
       <FloatInView>
@@ -57,35 +41,13 @@ const HeroLaunchTrial: FC<Props> = (props) => {
             variant="body1"
             color={'text.secondary'}
           >
-            Cancel anytime, choose a tier and use the code below at checkout.
+            <GradientText fontWeight={'bold'}>No card needed</GradientText> to
+            start. Sign up, pick your tier and hit the 3 Month Trial button.
+            Cancel anytime.
           </Typography>
           <div className="flex flex-col lg:flex-row  justify-center items-center mt-6 gap-5">
-            <TextField
-              value={discountCode}
-              variant="outlined"
-              size="small"
-              InputProps={{
-                readOnly: true,
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton size="small" onClick={handleCopy} edge="end">
-                      <ContentCopyIcon fontSize="small" />
-                    </IconButton>
-                  </InputAdornment>
-                )
-              }}
-              sx={{ maxWidth: 200 }}
-            />
             <RegisterButton />
           </div>
-          {copied && (
-            <Snackbar
-              open={copied}
-              autoHideDuration={6000}
-              onClose={() => setCopied(false)}
-              message="🚀 Copied"
-            />
-          )}
         </div>
       </FloatInView>
       {/* <div className="flex h-max -my-[20px]  justify-center items-center gap-3">
