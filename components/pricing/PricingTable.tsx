@@ -6,12 +6,12 @@ import FloatInView from 'components/float-in-view';
 export const _pricingPlans = [
   {
     subscription: 'individual',
-    price: 66,
+    price: 9.99,
     caption:
       'Perfect for start-ups and small restaurants with a single location.',
     lists: [
       { text: 'Single location', isAvailable: true },
-      { text: 'Max 3 deals at any time', isAvailable: true },
+      { text: 'Max 5 deals at any time', isAvailable: true },
       { text: 'Partner Dashboard to manage deals', isAvailable: true },
       {
         text: 'Analytics to track deal performance and customer engagement.',
@@ -21,22 +21,8 @@ export const _pricingPlans = [
   },
   {
     subscription: 'premium',
-    price: 120,
-    caption: 'Suitable for growing businesses with up to 3 locations.',
-    lists: [
-      { text: 'Up to 3 Locations', isAvailable: true },
-      { text: 'Max 15 deals across the locations', isAvailable: true },
-      { text: 'Partner Dashboard to manage deals.', isAvailable: true },
-      {
-        text: 'Analytics to track deal performance and customer engagement.',
-        isAvailable: true
-      }
-    ]
-  },
-  {
-    subscription: 'enterprise',
-    price: 'Contact Sales',
-    caption: 'Tailored for large enterprises with unlimited locations.',
+    price: 29.99,
+    caption: 'Unlimited locations and deals for growing businesses.',
     lists: [
       { text: 'Unlimited locations', isAvailable: true },
       { text: 'Unlimited deals', isAvailable: true },
@@ -47,6 +33,25 @@ export const _pricingPlans = [
       }
     ]
   }
+  // Enterprise is hidden, not removed. Premium is now unlimited on locations and
+  // deals, so the two cards had identical features and nothing to choose between.
+  // The API still handles the enterprise tier and its contact-sales enquiry, so
+  // existing enterprise customers are unaffected and this can come back whenever
+  // there's a real difference to sell.
+  // {
+  //   subscription: 'enterprise',
+  //   price: 'Contact Sales',
+  //   caption: 'Tailored for large enterprises with unlimited locations.',
+  //   lists: [
+  //     { text: 'Unlimited locations', isAvailable: true },
+  //     { text: 'Unlimited deals', isAvailable: true },
+  //     { text: 'Partner Dashboard to manage deals.', isAvailable: true },
+  //     {
+  //       text: 'Analytics to track deal performance and customer engagement.',
+  //       isAvailable: true
+  //     }
+  //   ]
+  // }
 ];
 
 const PricingWrapper = styled(Stack)(({ theme }) => ({
